@@ -10,6 +10,10 @@
     "preview": "vite preview",
     "prepare": "husky install"
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+    "*.{ts,tsx}": "bash -c 'tsc --noEmit'"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
