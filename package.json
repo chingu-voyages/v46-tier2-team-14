@@ -8,6 +8,7 @@
     "build": "tsc && vite build",
     "lint:code": "eslint --ignore-path .gitignore .",
     "check:types": "tsc --noEmit",
+    "prettier": "prettier  --ignore-path .gitignore --check .",
     "preview": "vite preview",
     "prepare": "husky install"
   },
@@ -28,9 +29,10 @@
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "husky": "^8.0.0",
     "lint-staged": "^14.0.1",
+    "prettier": "3.0.3",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5",
-    "husky": "^8.0.0"
+    "vite": "^4.4.5"
   }
 }
