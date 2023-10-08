@@ -5,7 +5,7 @@
 body {
   font-family: "Inter";
   background-color: var(--background);
-  color: var(--foreground);
+  color: var(--text);
 }
 #root {
   min-height: 100vh;
