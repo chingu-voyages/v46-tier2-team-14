@@ -22,6 +22,8 @@ module.exports = {
   rules: {
     "simple-import-sort/imports": "error",// will sort the import 
     "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": "error",// will sort the import 
+    "simple-import-sort/exports": "error",
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
