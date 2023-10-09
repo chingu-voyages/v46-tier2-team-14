@@ -7,9 +7,13 @@
 /* COMMON */
 :root[data-theme="light"] {
   --card: rgba(0, 0, 0, 0.03);
+  --border: rgba(0, 0, 0, 0.1);
+  --skeleton: rgba(0, 0, 0, 0.1);
 }
 :root[data-theme="dark"] {
   --card: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.1);
+  --skeleton: rgba(225, 225, 225, 0.05);
 }
 /* GREENS 🟩 */
 :root[data-theme="light"] {
@@ -17,7 +21,7 @@
   --background: hsl(43, 47%, 97%);
   --primary: hsl(124, 15%, 45%);
   --secondary: hsl(119, 24%, 57%);
-  --accent: hsl(121, 35%, 77%);
+  --accent: hsl(120, 22%, 7%);
   --card: rgba(0, 0, 0, 0.03);
 }
 :root[data-theme="dark"] {
@@ -27,23 +31,6 @@
   --secondary: hsl(119, 24%, 43%);
   --accent: hsl(121, 35%, 23%);
   --card: rgba(255, 255, 255, 0.03);
-}
-
-/* PURPLES 🟪 */
-
-:root[data-theme="light"] {
-  --text: #000000;
-  --background: #e8e8e8;
-  --primary: #692cc3;
-  --secondary: #d5cde0;
-  --accent: #3c0e86;
-}
-:root[data-theme="dark"] {
-  --text: #ffffff;
-  --background: #171717;
-  --primary: #783cd3;
-  --secondary: #271f32;
-  --accent: #a779f1;
 }
 
 /* ORANGES 🟧 */
