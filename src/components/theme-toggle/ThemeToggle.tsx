@@ -1,13 +1,14 @@
-import { useTheme } from "../../hooks/useTheme";
-import styles from "./theme-toggle.module.css";
-import { BsMoonStarsFill } from "react-icons/bs";
-import { BsSunFill } from "react-icons/bs";
+import { BsMoonStarsFill, BsSunFill } from "react-icons/bs";
 
-export function ThemeToggle() {
+import useTheme from "../../hooks/useTheme";
+import styles from "./theme-toggle.module.css";
+
+export default function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
 
   return (
     <button
+      type="button"
       className={styles.button}
       aria-label={theme}
       aria-live="polite"

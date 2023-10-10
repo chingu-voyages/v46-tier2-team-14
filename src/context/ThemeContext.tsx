@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useEffect, useMemo, useState } from "react";
 
 // types
 type Theme = "light" | "dark";
@@ -13,7 +13,7 @@ const storageKey = "theme";
 export const ThemeContext = createContext<ThemeContextState>(null!);
 ThemeContext.displayName = "ThemeContext";
 
-export function ThemeProvider(props: { children: React.ReactNode }) {
+export function ThemeProvider({ children }: { children: React.ReactNode }) {
   // get OS/browser's preferred color scheme
   const prefersDarkMode = window.matchMedia(
     "(prefers-color-scheme: dark)",
@@ -31,11 +31,18 @@ export function ThemeProvider(props: { children: React.ReactNode }) {
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
 
-  const value = {
-    theme,
-    toggleTheme: () =>
-      setTheme((currentTheme) => (currentTheme === "dark" ? "light" : "dark")),
-  };
+  const value = useMemo(
+    () => ({
+      theme,
+      toggleTheme: () =>
+        setTheme((currentTheme) =>
+          currentTheme === "dark" ? "light" : "dark",
+        ),
+    }),
+    [theme],
+  );
 
-  return <ThemeContext.Provider value={value} {...props} />;
+  return (
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+  );
 }
