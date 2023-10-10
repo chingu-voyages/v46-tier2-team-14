@@ -8,15 +8,15 @@ module.exports = {
     'airbnb',
     'airbnb-typescript',
     'plugin:react/recommended',
-    'plugin:jsx-a11y/recommended'
+    'plugin:jsx-a11y/recommended',
+    "prettier"
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   // parser: '@typescript-eslint/parser',
   parserOptions:{
       ecmaVersion:"latest",
       sourceType:'module',
-      project:'./tsconfig.json'
-
+      project:['./tsconfig.json', './tsconfig.node.json']
   },
   plugins: ["react-refresh","react","react-hooks","simple-import-sort","jsx-a11y"],
   rules: {
