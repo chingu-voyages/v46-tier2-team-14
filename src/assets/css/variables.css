@@ -1,0 +1,51 @@
+/* root variables */
+:root {
+  --font-primary: "Inter";
+  --font-secondary: "Inter";
+  --radius: 0.5rem;
+}
+/* COMMON */
+:root[data-theme="light"] {
+  --card: rgba(0, 0, 0, 0.03);
+  --border: rgba(0, 0, 0, 0.1);
+  --skeleton: rgba(0, 0, 0, 0.1);
+}
+:root[data-theme="dark"] {
+  --card: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.1);
+  --skeleton: rgba(225, 225, 225, 0.05);
+}
+/* GREENS 🟩 */
+:root[data-theme="light"] {
+  --text: hsl(42, 92%, 5%);
+  --background: hsl(43, 47%, 97%);
+  --primary: hsl(124, 15%, 45%);
+  --secondary: hsl(119, 24%, 57%);
+  --accent: hsl(120, 22%, 7%);
+  --card: rgba(0, 0, 0, 0.03);
+}
+:root[data-theme="dark"] {
+  --text: hsl(42, 92%, 95%);
+  --background: hsl(43, 47%, 3%);
+  --primary: hsl(124, 15%, 55%);
+  --secondary: hsl(119, 24%, 43%);
+  --accent: hsl(121, 35%, 23%);
+  --card: rgba(255, 255, 255, 0.03);
+}
+
+/* ORANGES 🟧 */
+
+:root[data-theme="light"] {
+  --text: #130e01;
+  --background: #fffaeb;
+  --primary: #ff8400;
+  --secondary: #fff5d6;
+  --accent: #cf4307;
+}
+:root[data-theme="dark"] {
+  --text: #fef9ec;
+  --background: #140f00;
+  --primary: #ff8400;
+  --secondary: #291f00;
+  --accent: #f86c30;
+}

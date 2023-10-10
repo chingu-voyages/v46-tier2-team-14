@@ -1,0 +1,15 @@
+.button {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+  border-radius: 0.25rem;
+}
+
+.button:hover {
+  background-color: var(--card);
+}
