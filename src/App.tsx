@@ -1,7 +1,5 @@
-import "./App.css";
+import Layout from "./components/layout/Layout";
 
-function App() {
-  return <h1>Recipe Store</h1>;
+export default function App() {
+  return <Layout>layout</Layout>;
 }
-
-export default App;
