@@ -1,0 +1,38 @@
+.header,
+.branding,
+.icons {
+  display: flex;
+  align-items: center;
+}
+.header {
+  justify-content: space-between;
+}
+
+.branding {
+  color: var(--text);
+  text-decoration: none;
+}
+.branding h1 {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+}
+
+.icons {
+  gap: 1em;
+}
+
+.github {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+  border-radius: 0.25rem;
+}
+
+.github:hover {
+  background-color: var(--card);
+}
