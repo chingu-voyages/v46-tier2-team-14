@@ -3,6 +3,21 @@
   --font-primary: "Inter";
   --font-secondary: "Inter";
   --radius: 0.5rem;
+  /* 
+    * fluid typography?
+    https://typescale.com/ 
+    https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75%7C0.5%7C0.25,1.5%7C2%7C3%7C4%7C6,s-l&g=s,l,xl,12
+
+    how about this: https://utopia.fyi/type/calculator?c=320,18,1.25,1240,18,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+  */
+  --text-xs: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+  --text-sm: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+  --text-base: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --text-lg: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+  --text-xl: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+  --text-2xl: clamp(1.9438rem, 1.7707rem + 0.8652vw, 2.4413rem);
+  --text-3xl: clamp(2.3325rem, 2.0823rem + 1.2511vw, 3.0519rem);
+  --text-4xl: clamp(2.7994rem, 2.4461rem + 1.7663vw, 3.815rem);
 }
 /* COMMON */
 :root[data-theme="light"] {
