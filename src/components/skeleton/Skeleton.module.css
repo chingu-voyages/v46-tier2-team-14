@@ -1,0 +1,36 @@
+.skeleton {
+  --loader-background-color: #eeeeee;
+  --loader-highlight-color: #dedede;
+  background: linear-gradient(
+    90deg,
+    var(--loader-background-color) 25%,
+    var(--loader-highlight-color) 50%,
+    var(--loader-background-color) 75%
+  );
+
+  height: 2rem;
+  background-size: 200% 100%;
+
+  animation: loading 2s infinite ease-in-out;
+}
+
+.rounded {
+  border-radius: 1rem;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.rectangle {
+  border-radius: 0;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
