@@ -1,17 +1,22 @@
 .skeleton {
   --loader-background-color: #eeeeee;
   --loader-highlight-color: #dedede;
+  background-color: var(--loader-background-color);
+  overflow: hidden;
+}
+
+.skeleton::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  animation: loading 1.5s infinite;
   background: linear-gradient(
-    90deg,
-    var(--loader-background-color) 25%,
-    var(--loader-highlight-color) 50%,
-    var(--loader-background-color) 75%
+    to right,
+    var(--loader-background-color),
+    var(--loader-highlight-color),
+    var(--loader-background-color)
   );
-
-  height: 2rem;
-  background-size: 200% 100%;
-
-  animation: loading 2s infinite ease-in-out;
 }
 
 .rounded {
@@ -20,6 +25,7 @@
 
 .circle {
   border-radius: 50%;
+  aspect-ratio: 1;
 }
 
 .rectangle {
@@ -28,9 +34,10 @@
 
 @keyframes loading {
   0% {
-    background-position: 200% 0;
+    transform: translateX(-100%);
   }
+
   100% {
-    background-position: -200% 0;
+    transform: translateX(100%);
   }
 }
