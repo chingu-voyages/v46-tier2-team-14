@@ -1,6 +1,4 @@
 .skeleton {
-  --loader-background-color: #eeeeee;
-  --loader-highlight-color: #dedede;
   background-color: var(--loader-background-color);
   overflow: hidden;
 }
@@ -20,7 +18,7 @@
 }
 
 .rounded {
-  border-radius: 1rem;
+  border-radius: var(--rounded-radius);
 }
 
 .circle {
