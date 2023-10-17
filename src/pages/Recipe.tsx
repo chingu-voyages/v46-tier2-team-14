@@ -11,6 +11,7 @@ interface Post {
 
 const retrievePost = async (postId: number): Promise<Post> => {
   const response = await axios.get<Post>(
+    // this is just a dummy API for setup, will be removed later
     `https://jsonplaceholder.typicode.com/posts/${postId}`,
   );
   return response.data;
