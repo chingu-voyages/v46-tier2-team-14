@@ -16,6 +16,10 @@
   --text-2xl: clamp(1.7281rem, 1.5053rem + 1.1141vw, 2.3688rem);
   --text-3xl: clamp(2.0738rem, 1.6968rem + 1.8848vw, 3.1575rem);
   --text-4xl: clamp(2.4881rem, 1.8896rem + 2.9924vw, 4.2088rem);
+  /* for skeleton */
+  --loader-background-color: #eeeeee;
+  --loader-highlight-color: #dedede;
+  --rounded-radius: 1rem;
 }
 /* COMMON */
 :root[data-theme="light"] {
