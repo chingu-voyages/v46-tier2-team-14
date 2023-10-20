@@ -23,6 +23,11 @@ body {
   border: 1px solid var(--border);
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 2px dashed var(--primary);
+}
+
 /* utility classes */
 /* screen reader only: https://benmyers.dev/blog/native-visually-hidden/ */
 .sr-only:not(:focus):not(:active) {
