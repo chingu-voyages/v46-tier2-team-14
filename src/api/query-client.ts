@@ -8,4 +8,7 @@ const queryClient = new QueryClient({
   },
 });
 
+// results are cached in-memory for now, invalidated on page refresh
+// check for persistence: https://tanstack.com/query/latest/docs/react/plugins/persistQueryClient
+
 export default queryClient;
