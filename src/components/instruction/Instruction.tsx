@@ -1,6 +1,8 @@
+import styles from "./instruction.module.css";
+
 function Instruction() {
   return (
-    <div>
+    <div className={styles.container}>
       <h3>Instruction</h3>
       <ul>
         <li>Put the flame on </li>
