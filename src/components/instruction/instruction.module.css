@@ -1,0 +1,9 @@
+.container {
+  background: rgb(243, 209, 209);
+  margin-top: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+}
