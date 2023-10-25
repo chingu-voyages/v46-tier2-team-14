@@ -1,6 +1,8 @@
+import styles from "./Nutrition.module.css";
+
 function NutritionInfo() {
   return (
-    <div>
+    <div className={styles.container}>
       {/* <h3>Nutrition</h3>
       <p>Calories: {nutrition.calories}</p>
       <p>Carbohydrates: {nutrition.carbohydrates}</p>
