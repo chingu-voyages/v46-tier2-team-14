@@ -15,6 +15,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
 
           <Route path="/recipe/:postId" element={<DisplayPost />} />
+          {/* <Route path="/nutrition" element={<Nutrition />} /> */}
         </Routes>
       </Layout>
     </QueryClientProvider>
