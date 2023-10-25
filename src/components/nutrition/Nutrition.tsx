@@ -20,34 +20,3 @@ function NutritionInfo() {
 }
 
 export default NutritionInfo;
-
-// import React from "react";
-
-// interface Nutrition {
-//   calories: number;
-//   carbohydrates: number;
-//   fat: number;
-//   protein: number;
-//   sugar: number;
-//   fiber: number;
-// }
-
-// interface NutritionInfoProps {
-//   nutrition: Nutrition;
-// }
-
-// const NutritionInfo: React.FC<NutritionInfoProps> = ({ nutrition }) => {
-//   return (
-//     <div>
-//       <h3>Nutrition</h3>
-//       <p>Calories: {nutrition.calories}</p>
-//       <p>Carbohydrates: {nutrition.carbohydrates}</p>
-//       <p>Fat: {nutrition.fat}</p>
-//       <p>Protein: {nutrition.protein}</p>
-//       <p>Sugar: {nutrition.sugar}</p>
-//       <p>Fiber: {nutrition.fiber}</p>
-//     </div>
-//   );
-// };
-
-// export default NutritionInfo;

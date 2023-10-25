@@ -2,6 +2,7 @@ import axios from "axios";
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
 
+import Instruction from "../components/instruction/Instruction";
 import NutritionInfo from "../components/nutrition/Nutrition";
 
 interface Post {
@@ -39,6 +40,7 @@ function DisplayPost() {
       <h3>{post?.title}</h3>
       <p>{post?.body}</p>
       <NutritionInfo />
+      <Instruction />
     </div>
   );
 }
