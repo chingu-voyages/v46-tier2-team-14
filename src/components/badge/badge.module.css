@@ -1,0 +1,20 @@
+.badge {
+  font-size: var(--text-sm);
+  border: 1px solid var(--border);
+  padding: 0.25em 0.5em;
+  border-radius: 9999px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.25em;
+  text-decoration: none;
+  color: var(--text);
+  margin: 0;
+  white-space: nowrap;
+}
+
+a.badge:hover {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
