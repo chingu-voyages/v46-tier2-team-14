@@ -1,0 +1,12 @@
+.recipe {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .recipe {
+    display: grid;
+    grid-template-columns: 0.75fr 1fr;
+    gap: 2.5em;
+  }
+}
