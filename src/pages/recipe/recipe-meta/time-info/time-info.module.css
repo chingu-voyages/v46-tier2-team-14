@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.times {
+  display: flex;
+  flex: 1;
+}
+
+.times > div {
+  display: flex;
+  flex: 1;
+  /* flex-direction: column; */
+  gap: 0.25em;
+}
+
+.times > div dt {
+  /* opacity: 0.8;
+  font-weight: 600; */
+  font-size: var(--text-base);
+}
+.times > div dd {
+  font-weight: 600;
+}
+
+.tier {
+  display: flex;
+  font-weight: 500;
+}
