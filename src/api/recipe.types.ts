@@ -3,11 +3,35 @@ export type Recipe = {
   name: string;
   thumbnail_url: string;
   description: string;
+  original_video_url: string;
+
+  cook_time_minutes: number | null;
+  prep_time_minutes: number | null;
+  total_time_minutes: number | null;
+  total_time_tier: TotalTimeTier | null;
+
+  user_ratings: UserRatings;
+
+  yields: string;
+  servings_noun_plural: string;
+  num_servings: number;
+  servings_noun_singular: string;
 
   nutrition: Nutrition | null;
   tags: Tag[] | null; // for categories
   instructions: Instruction[] | null; // for recipe steps
   sections: Section[] | null; // for ingredients
+};
+
+export type UserRatings = {
+  count_positive: number;
+  score: number;
+  count_negative: number;
+};
+
+export type TotalTimeTier = {
+  tier: string;
+  display_tier: string;
 };
 
 export type Nutrition = {
