@@ -24,12 +24,12 @@
 /* COMMON */
 :root[data-theme="light"] {
   --card: rgba(0, 0, 0, 0.03);
-  --border: rgba(0, 0, 0, 0.1);
+  --border: rgba(0, 0, 0, 0.2);
   --skeleton: rgba(0, 0, 0, 0.1);
 }
 :root[data-theme="dark"] {
   --card: rgba(255, 255, 255, 0.05);
-  --border: rgba(255, 255, 255, 0.1);
+  --border: rgba(255, 255, 255, 0.2);
   --skeleton: rgba(225, 225, 225, 0.05);
 }
 /* GREENS 🟩 */
