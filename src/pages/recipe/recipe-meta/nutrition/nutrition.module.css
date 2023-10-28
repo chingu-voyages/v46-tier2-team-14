@@ -1,0 +1,29 @@
+.container {
+  /* background-color: rgba(95, 67, 43, 0.3); */
+  /* padding: 1rem; */
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: row;
+  /* width: 50%; */
+  /* font-size: 2rem; */
+  /* border-radius: 10%; */
+}
+
+ul {
+  padding: 1rem;
+  margin-right: 5px;
+  border-color: rgb(206, 204, 204);
+  border-radius: 10px;
+  border-width: 1px; /* This sets the thickness of the border */
+  border-style: solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+ul span {
+  text-align: center;
+  flex: 1;
+  font-weight: 600;
+}
