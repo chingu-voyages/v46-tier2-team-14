@@ -5,25 +5,45 @@
   align-items: center;
   justify-items: center;
   flex-direction: row;
+  /* padding: 2rem;/ */
   /* width: 50%; */
   /* font-size: 2rem; */
   /* border-radius: 10%; */
 }
 
-ul {
+.nutri {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--secondary);
+  margin-left: 3px;
+  padding: 1rem;
+  width: 20%;
+  border-color: rgb(206, 204, 204);
+  border-radius: 10px;
+  border-width: 1px; /* This sets the thickness of the border */
+  border-style: solid;
+}
+
+/* ul {
   padding: 1rem;
   margin-right: 5px;
   border-color: rgb(206, 204, 204);
   border-radius: 10px;
   border-width: 1px; /* This sets the thickness of the border */
-  border-style: solid;
+/* border-style: solid;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: column;
-}
-ul span {
+  flex-direction: column; */
+
+.nutri span {
   text-align: center;
   flex: 1;
   font-weight: 600;
+}
+
+.nutri h3 {
+  font-weight: lighter;
 }
