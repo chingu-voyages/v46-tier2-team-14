@@ -30,6 +30,15 @@
   font-weight: lighter;
 }
 
+@media (max-width: 962px) {
+  .nutri {
+    width: 18%;
+  }
+  .nutri span,
+  h3 {
+    font-size: 80%;
+  }
+}
 @media (max-width: 768px) {
   .nutri {
     width: 15%;
