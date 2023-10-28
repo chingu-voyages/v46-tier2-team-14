@@ -38,7 +38,7 @@ export default function RecipeMeta() {
       <img src={recipe.thumbnail_url} alt="" className={styles.image} />
       <TimeInfo />
       <p className={styles.description}>{recipe.description}</p>
-      {/* <Nutrition  /> */}
+      <Nutrition nutrition={recipe.nutrition} />
     </section>
   );
 }
