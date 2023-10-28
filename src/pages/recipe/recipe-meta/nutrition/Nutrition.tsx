@@ -1,35 +1,48 @@
 import styles from "./nutrition.module.css";
 
-export default function Nutrition() {
+interface NutritionProps {
+  nutrition: {
+    protein: number;
+    fat: number;
+    calories: number;
+    sugar: number;
+    carbohydrates: number;
+    fiber: number;
+  };
+}
+
+function Nutrition({ nutrition }: NutritionProps) {
   return (
     <>
       <h2>Nutrition per serving</h2>
       <div className={styles.container}>
         <div className={styles.nutri}>
           <span>Calories</span>
-          <h3>50 Kcal</h3>
+          <h3>{nutrition.calories}Kcal</h3>
         </div>
         <div className={styles.nutri}>
           <span>Carbs</span>
-          <h3>1 gm</h3>
+          <h3>{nutrition.carbohydrates}gm</h3>
         </div>
         <div className={styles.nutri}>
           <span>Fat</span>
-          <h3>4 gm</h3>
+          <h3>{nutrition.fat}gm</h3>
         </div>
         <div className={styles.nutri}>
           <span>Protein</span>
-          <h3>7 gm</h3>
+          <h3>{nutrition.protein}gm</h3>
         </div>
         <div className={styles.nutri}>
           <span>Sugar</span>
-          <h3>8 gm</h3>
+          <h3>{nutrition.sugar}gm</h3>
         </div>
         <div className={styles.nutri}>
           <span>Fiber</span>
-          <h3>6 gm</h3>
+          <h3>{nutrition.fiber}gm</h3>
         </div>
       </div>
     </>
   );
 }
+
+export default Nutrition;
