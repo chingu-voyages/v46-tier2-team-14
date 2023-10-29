@@ -1,5 +1,5 @@
 import useRecipe from "../../../hooks/useRecipe";
-import styles from "../recipe.module.css";
+import styles from "./recipe-ingredients.module.css";
 
 export default function RecipeIngredients() {
   const recipe = useRecipe();
@@ -13,18 +13,19 @@ export default function RecipeIngredients() {
   return (
     <section>
       <h2>Ingredients</h2>
-      <div className={styles.instructions}>
-        <ul>
-          {recipe.sections.map((section) =>
-            section.components &&
-            Array.isArray(section.components) &&
-            section.components.length > 0
-              ? section.components.map((component) => (
+      <div className={styles.ingrediants}>
+        {recipe.sections.map((section) => (
+          <div key={section.position} className={styles.sectionsdiv}>
+            <h2>{section.name}</h2>
+            <ul>
+              {section.components &&
+                Array.isArray(section.components) &&
+                section.components.map((component) => (
                   <li key={component.id}>{component.raw_text}</li>
-                ))
-              : null,
-          )}
-        </ul>
+                ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </section>
   );
