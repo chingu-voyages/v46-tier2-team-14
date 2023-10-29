@@ -10,12 +10,3 @@
     gap: 2.5em;
   }
 }
-.instructions {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  background-color: var(--secondary);
-  border-radius: 10px;
-  margin-top: 1rem;
-}

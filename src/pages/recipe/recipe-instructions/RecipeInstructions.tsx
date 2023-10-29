@@ -1,5 +1,5 @@
 import useRecipe from "../../../hooks/useRecipe";
-import styles from "../recipe.module.css";
+import styles from "./recipe-instruction.module.css";
 
 export default function RecipeInstructions() {
   const recipe = useRecipe();
