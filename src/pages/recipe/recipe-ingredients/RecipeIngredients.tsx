@@ -15,7 +15,7 @@ export default function RecipeIngredients() {
       <h2>Ingredients</h2>
       <div className={styles.ingrediants}>
         {recipe.sections.map((section) => (
-          <div key={section.position} className={styles.sectionsdiv}>
+          <div key={section.position} className={styles.ingredientSection}>
             <h2>{section.name}</h2>
             <ul>
               {section.components &&
