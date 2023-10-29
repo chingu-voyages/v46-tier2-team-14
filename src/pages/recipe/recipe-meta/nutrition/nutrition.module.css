@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: var(--secondary);
+  background-color: var(--card);
   padding: 1rem;
   width: 20%;
   border-color: var(--border);
