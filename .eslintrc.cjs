@@ -37,8 +37,5 @@ module.exports = {
     "react-hooks/exhaustive-deps": "warn",
     "linebreak-style": ["off"],
     "arrow-parens": 0,
-    "react/prop-types": "off",
-    "react/require-default-props": "off",
-    "react/no-unused-prop-types": "off",
   },
 };
