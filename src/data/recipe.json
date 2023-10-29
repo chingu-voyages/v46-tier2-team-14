@@ -1,0 +1,897 @@
+{
+  "servings_noun_singular": "serving",
+  "buzz_id": 4804581,
+  "compilations": [
+    {
+      "thumbnail_url": "https://img.buzzfeed.com/video-api-prod/assets/e83de47984b74d7f81e491aabe00e836/4_Healthy_Weeknight_Dinners_Under_300_Calories.jpg",
+      "beauty_url": null,
+      "buzz_id": null,
+      "slug": "dinners-under-500-calories",
+      "country": "US",
+      "show": [
+        {
+          "name": "Goodful",
+          "id": 34
+        }
+      ],
+      "description": "We’re all looking for ways to eat a bit healthier and let’s face it: it’s not always easy. But that’s why we’re here to help. These quick and easy dinners under 500 calories promise you explosions of flavor, courtesy of some strong, herbaceous notes and the freshest of ingredients. From a <a href=\"https://tasty.co/recipe/one-pan-roasted-chicken-and-sweet-potatoes\">single-pan roasted chicken</a> to a <a href=\"https://tasty.co/recipe/one-pot-chickpea-curry\">one-pot chickpea curry</a>, we’re here to help you eat healthy, happy, and flavor-laden. \n",
+      "thumbnail_alt_text": "",
+      "approved_at": 1541000496,
+      "video_id": 22965,
+      "aspect_ratio": "1:1",
+      "is_shoppable": true,
+      "facebook_posts": [],
+      "language": "eng",
+      "video_url": "https://vid.tasty.co/output/113684/hls24_1540919176.m3u8",
+      "canonical_id": "compilation:712",
+      "id": 712,
+      "keywords": null,
+      "created_at": 1541000315,
+      "draft_status": "published",
+      "name": "Dinners Under 500 Calories",
+      "promotion": "full"
+    },
+    {
+      "slug": "kickstart-your-new-year-with-these-low-calorie-meal-recipes",
+      "keywords": null,
+      "description": null,
+      "draft_status": "published",
+      "thumbnail_alt_text": "",
+      "approved_at": 1576162826,
+      "name": "Kickstart Your New Year With These Low Calorie Meal Recipes",
+      "canonical_id": "compilation:1320",
+      "show": [
+        {
+          "id": 17,
+          "name": "Tasty"
+        }
+      ],
+      "id": 1320,
+      "beauty_url": null,
+      "promotion": "full",
+      "aspect_ratio": "1:1",
+      "country": "US",
+      "facebook_posts": [],
+      "created_at": 1576141044,
+      "video_url": "https://vid.tasty.co/output/154794/hls24_1576141088.m3u8",
+      "video_id": 97160,
+      "is_shoppable": false,
+      "language": "eng",
+      "thumbnail_url": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/247447.jpg",
+      "buzz_id": null
+    },
+    {
+      "keywords": null,
+      "created_at": 1583832261,
+      "thumbnail_url": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/257936.jpg",
+      "buzz_id": null,
+      "name": "5 Scrumptious Low-Calorie Recipes",
+      "canonical_id": "compilation:1431",
+      "slug": "5-scrumptious-low-calorie-recipes",
+      "video_id": 101198,
+      "aspect_ratio": "1:1",
+      "country": "US",
+      "facebook_posts": [],
+      "draft_status": "published",
+      "id": 1431,
+      "is_shoppable": false,
+      "show": [
+        {
+          "name": "Goodful",
+          "id": 34
+        }
+      ],
+      "description": null,
+      "approved_at": 1583889827,
+      "promotion": "full",
+      "language": "eng",
+      "thumbnail_alt_text": "",
+      "video_url": "https://vid.tasty.co/output/162141/hls24_1583832333.m3u8",
+      "beauty_url": null
+    },
+    {
+      "id": 2645,
+      "country": "US",
+      "show": [
+        {
+          "name": "Tasty",
+          "id": 17
+        }
+      ],
+      "created_at": 1626959944,
+      "thumbnail_url": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/333069.jpg",
+      "video_url": "https://vid.tasty.co/output/210219/hls24_1626959980.m3u8",
+      "approved_at": 1627576989,
+      "canonical_id": "compilation:2645",
+      "video_id": 137049,
+      "aspect_ratio": "1:1",
+      "description": "Nothing spells 'sumptuous' like a lip-smaking stir-fry. Our <a href=\"https://tasty.co/recipe/20-minute-beef-and-broccoli-noodle-stir-fry\">20-minute beef and broccoli stir-fry</a> is as easy to make as it is to eat. If you're feeling fancy, though, you can try the <a href=\"https://tasty.co/recipe/honey-garlic-shrimp-stir-fry\">honey garlic shrimp stir-fry</a>. Need a vegetarian option? Our tofu stir-fry won't disappoint. Get your woks and chopsticks out already!",
+      "draft_status": "published",
+      "language": "eng",
+      "name": "How To Stir-Fry At Home",
+      "buzz_id": null,
+      "slug": "how-to-stir-fry-at-home",
+      "is_shoppable": false,
+      "keywords": null,
+      "beauty_url": null,
+      "promotion": "full",
+      "facebook_posts": [],
+      "thumbnail_alt_text": ""
+    },
+    {
+      "aspect_ratio": "1:1",
+      "keywords": null,
+      "thumbnail_url": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/413921.jpg",
+      "name": "Healthy Recipes for Your New Year's Resolutions",
+      "id": 3448,
+      "slug": "healthy-recipes-new-years-resolutions",
+      "promotion": "full",
+      "created_at": 1669775988,
+      "language": "eng",
+      "is_shoppable": false,
+      "facebook_posts": [],
+      "show": [
+        {
+          "name": "Tasty",
+          "id": 17
+        }
+      ],
+      "canonical_id": "compilation:3448",
+      "buzz_id": null,
+      "country": "US",
+      "description": "The new year is upon us and so is the time to make some choices in life. Let’s make a resolution to enter 2023 with healthier habits. From <a href=\"https://tasty.co/recipe/weekday-meal-prep-pesto-chicken-veggies\">Weekday Meal-Prep Pesto Chicken & Veggies</a> to a <a href=\"https://tasty.co/recipe/berry-smoothie-bowl\">Berry Smoothie Bowl</a>, we have got your culinary pact covered.",
+      "draft_status": "published",
+      "thumbnail_alt_text": "",
+      "video_url": "https://vid.tasty.co/output/264243/hls24_1669775959.m3u8",
+      "approved_at": 1672247047,
+      "beauty_url": null,
+      "video_id": 175312
+    },
+    {
+      "aspect_ratio": "1:1",
+      "approved_at": 1683140221,
+      "beauty_url": null,
+      "video_id": 190222,
+      "buzz_id": null,
+      "slug": "stir-fry-recipes",
+      "is_shoppable": false,
+      "keywords": null,
+      "created_at": 1682317611,
+      "language": "eng",
+      "id": 3564,
+      "facebook_posts": [],
+      "thumbnail_url": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/442384.jpg",
+      "thumbnail_alt_text": "",
+      "video_url": "https://vid.tasty.co/output/285681/hls24_1682317601.m3u8",
+      "canonical_id": "compilation:3564",
+      "promotion": "full",
+      "country": "US",
+      "show": [
+        {
+          "id": 17,
+          "name": "Tasty"
+        }
+      ],
+      "description": "Whip up a quick and flavorful meal with these sensational stir-fry recipes! Try the <a href=\"https://tasty.co/recipe/one-pan-drunken-noodles\">One-Pan Drunken Noodles</a>, packed with bold Thai-inspired flavors, or the <a href=\"https://tasty.co/recipe/one-pan-chicken-and-broccoli-stir-fry\">One-Pan Chicken and Broccoli Stir-Fry</a>, loaded with tender chicken and crisp broccoli in a savory sauce. This collection is a must-try for busy cooks looking for delicious and easy-to-make meals. Get your wok ready and savor these flavors, perfect for weeknight dinners or a quick and satisfying meal anytime!",
+      "draft_status": "published",
+      "name": "Quick & Easy Stir-Fry Recipes"
+    }
+  ],
+  "language": "eng",
+  "nutrition": {
+    "protein": 24,
+    "fat": 4,
+    "calories": 157,
+    "sugar": 0,
+    "carbohydrates": 2,
+    "fiber": 17,
+    "updated_at": "2023-06-08T08:10:06+02:00"
+  },
+  "num_servings": 3,
+  "inspired_by_url": null,
+  "nutrition_visibility": "auto",
+  "is_one_top": false,
+  "video_url": "https://vid.tasty.co/output/10384/low_1474394325.m3u8",
+  "keywords": null,
+  "id": 534,
+  "description": "This lemon chicken and asparagus stir-fry is a quick and easy weeknight dinner that is full of flavor. The tangy lemon sauce pairs perfectly with the tender chicken and crispy asparagus, making it a healthy and satisfying meal. Serve it over rice or quinoa for a complete meal.",
+  "name": "Lemon Chicken And Asparagus Stir-Fry",
+  "show": {
+    "name": "Tasty International: Proper Tasty",
+    "id": 20
+  },
+  "seo_title": null,
+  "cook_time_minutes": null,
+  "is_subscriber_content": false,
+  "aspect_ratio": "1:1",
+  "servings_noun_plural": "servings",
+  "video_ad_content": "undetermined",
+  "user_ratings": {
+    "count_negative": 95,
+    "count_positive": 2967,
+    "score": 0.968975
+  },
+  "beauty_url": null,
+  "thumbnail_url": "https://img.buzzfeed.com/video-api-prod/assets/2ae24afe483c4568b76f487777fc1739/BFV12624_LemonChickenandAsparagusStirFry-ThumbTextless1080.jpg",
+  "approved_at": 1497819135,
+  "renditions": [
+    {
+      "poster_url": "https://img.buzzfeed.com/video-transcoder-prod/output/10384/1445289064805-h2exzu/1474394325_00001.png",
+      "url": "https://vid.tasty.co/output/10384/low_1474394325.m3u8",
+      "duration": 0,
+      "bit_rate": null,
+      "content_type": "application/vnd.apple.mpegurl",
+      "width": 1080,
+      "minimum_bit_rate": null,
+      "height": 1080,
+      "container": "mp4",
+      "file_size": null,
+      "aspect": "square",
+      "name": "low",
+      "maximum_bit_rate": null
+    },
+    {
+      "duration": 0,
+      "aspect": "square",
+      "maximum_bit_rate": null,
+      "height": 720,
+      "container": "mp4",
+      "file_size": null,
+      "url": "https://vid.tasty.co/output/10384/mp4_1280X720/1474394325",
+      "bit_rate": null,
+      "content_type": "video/mp4",
+      "width": 720,
+      "minimum_bit_rate": null,
+      "name": "mp4_720x720",
+      "poster_url": "https://img.buzzfeed.com/video-transcoder-prod/output/10384/mp4_1280X720/1474394325_00001.png"
+    },
+    {
+      "content_type": "video/mp4",
+      "minimum_bit_rate": null,
+      "maximum_bit_rate": null,
+      "container": "mp4",
+      "poster_url": "https://img.buzzfeed.com/video-transcoder-prod/output/10384/mp4_640x640/1474394325_00001.png",
+      "url": "https://vid.tasty.co/output/10384/mp4_640x640/1474394325",
+      "duration": 0,
+      "bit_rate": null,
+      "height": 640,
+      "file_size": null,
+      "aspect": "square",
+      "width": 640,
+      "name": "mp4_640x640"
+    },
+    {
+      "poster_url": "https://img.buzzfeed.com/video-transcoder-prod/output/10384/mp4_720x1280/1474394325_00001.png",
+      "content_type": "video/mp4",
+      "aspect": "square",
+      "maximum_bit_rate": null,
+      "minimum_bit_rate": null,
+      "name": "mp4_720x720",
+      "container": "mp4",
+      "file_size": null,
+      "url": "https://vid.tasty.co/output/10384/mp4_720x1280/1474394325",
+      "duration": 0,
+      "bit_rate": null,
+      "width": 720,
+      "height": 720
+    }
+  ],
+  "seo_path": "9295813,64486,9299528",
+  "show_id": 20,
+  "total_time_minutes": null,
+  "credits": [
+    {
+      "name": "Ellie Holland",
+      "type": "internal"
+    }
+  ],
+  "original_video_url": "https://s3.amazonaws.com/video-api-prod/assets/d7f408d3286248b9b73eec844d537da6/BFV12624_LemonChickenandAsparagusStirFry-FB1080SQ.mp4",
+  "canonical_id": "recipe:534",
+  "thumbnail_alt_text": "",
+  "facebook_posts": [],
+  "price": {
+    "consumption_total": 1000,
+    "consumption_portion": 350,
+    "total": 1700,
+    "updated_at": "2023-10-25T07:13:55+02:00",
+    "portion": 550
+  },
+  "tags": [
+    {
+      "type": "cuisine",
+      "root_tag_type": "cuisine",
+      "name": "north_american",
+      "id": 64444,
+      "display_name": "North American"
+    },
+    {
+      "display_name": "British",
+      "type": "european",
+      "root_tag_type": "cuisine",
+      "name": "british",
+      "id": 64447
+    },
+    {
+      "name": "dairy_free",
+      "id": 64463,
+      "display_name": "Dairy-Free",
+      "type": "dietary",
+      "root_tag_type": "dietary"
+    },
+    {
+      "root_tag_type": "dietary",
+      "name": "gluten_free",
+      "id": 64465,
+      "display_name": "Gluten-Free",
+      "type": "dietary"
+    },
+    {
+      "display_name": "Healthy",
+      "type": "healthy",
+      "root_tag_type": "healthy",
+      "name": "healthy",
+      "id": 64466
+    },
+    {
+      "type": "healthy",
+      "root_tag_type": "healthy",
+      "name": "low_carb",
+      "id": 64467,
+      "display_name": "Low-Carb"
+    },
+    {
+      "root_tag_type": "difficulty",
+      "name": "easy",
+      "id": 64471,
+      "display_name": "Easy",
+      "type": "difficulty"
+    },
+    {
+      "root_tag_type": "difficulty",
+      "name": "under_30_minutes",
+      "id": 64472,
+      "display_name": "Under 30 Minutes",
+      "type": "difficulty"
+    },
+    {
+      "type": "meal",
+      "root_tag_type": "meal",
+      "name": "dinner",
+      "id": 64486,
+      "display_name": "Dinner"
+    },
+    {
+      "root_tag_type": "seasonal",
+      "name": "date_night",
+      "id": 64500,
+      "display_name": "Date Night",
+      "type": "occasion"
+    },
+    {
+      "name": "weeknight",
+      "id": 64505,
+      "display_name": "Weeknight",
+      "type": "dinner",
+      "root_tag_type": "meal"
+    },
+    {
+      "root_tag_type": "appliance",
+      "name": "stove_top",
+      "id": 65848,
+      "display_name": "Stove Top",
+      "type": "appliance"
+    },
+    {
+      "root_tag_type": "cooking_style",
+      "name": "meal_prep",
+      "id": 65853,
+      "display_name": "Meal Prep",
+      "type": "cooking_style"
+    },
+    {
+      "name": "pan_fry",
+      "id": 65859,
+      "display_name": "Pan Fry",
+      "type": "cooking_style",
+      "root_tag_type": "cooking_style"
+    },
+    {
+      "root_tag_type": "equipment",
+      "name": "pyrex",
+      "id": 1247785,
+      "display_name": "Pyrex",
+      "type": "equipment"
+    },
+    {
+      "root_tag_type": "equipment",
+      "name": "saute_pan",
+      "id": 1247787,
+      "display_name": "Saute Pan",
+      "type": "equipment"
+    },
+    {
+      "root_tag_type": "equipment",
+      "name": "tongs",
+      "id": 1247790,
+      "display_name": "Tongs",
+      "type": "equipment"
+    },
+    {
+      "root_tag_type": "equipment",
+      "name": "wooden_spoon",
+      "id": 1247794,
+      "display_name": "Wooden Spoon",
+      "type": "equipment"
+    },
+    {
+      "type": "equipment",
+      "root_tag_type": "equipment",
+      "name": "chefs_knife",
+      "id": 1280501,
+      "display_name": "Chef's Knife"
+    },
+    {
+      "name": "cutting_board",
+      "id": 1280503,
+      "display_name": "Cutting Board",
+      "type": "equipment",
+      "root_tag_type": "equipment"
+    },
+    {
+      "root_tag_type": "equipment",
+      "name": "dry_measuring_cups",
+      "id": 1280507,
+      "display_name": "Dry Measuring Cups",
+      "type": "equipment"
+    },
+    {
+      "root_tag_type": "equipment",
+      "name": "measuring_spoons",
+      "id": 1280508,
+      "display_name": "Measuring Spoons",
+      "type": "equipment"
+    },
+    {
+      "display_name": "Keto",
+      "type": "dietary",
+      "root_tag_type": "dietary",
+      "name": "keto",
+      "id": 8091756
+    },
+    {
+      "root_tag_type": "healthy",
+      "name": "low_calorie",
+      "id": 8091916,
+      "display_name": "Low-Calorie",
+      "type": "healthy"
+    },
+    {
+      "id": 8091917,
+      "display_name": "High-Protein",
+      "type": "healthy",
+      "root_tag_type": "healthy",
+      "name": "high_protein"
+    },
+    {
+      "display_name": "Low-Sugar",
+      "type": "healthy",
+      "root_tag_type": "healthy",
+      "name": "low_sugar",
+      "id": 8091918
+    },
+    {
+      "display_name": "Low-Fat",
+      "type": "healthy",
+      "root_tag_type": "healthy",
+      "name": "low_fat",
+      "id": 8091919
+    },
+    {
+      "root_tag_type": "healthy",
+      "name": "high_fiber",
+      "id": 8091920,
+      "display_name": "High-Fiber",
+      "type": "healthy"
+    },
+    {
+      "root_tag_type": "cuisine",
+      "name": "asian",
+      "id": 9295873,
+      "display_name": "Asian",
+      "type": "cuisine"
+    },
+    {
+      "root_tag_type": "meal",
+      "name": "chicken",
+      "id": 9299514,
+      "display_name": "Chicken",
+      "type": "dinner"
+    },
+    {
+      "type": "dinner",
+      "root_tag_type": "meal",
+      "name": "stir_fry",
+      "id": 9299528,
+      "display_name": "Stir Fry"
+    }
+  ],
+  "is_app_only": false,
+  "updated_at": 1684101600,
+  "topics": [
+    {
+      "name": "Easy Dinner",
+      "slug": "easy-dinner"
+    },
+    {
+      "name": "Healthy Eating",
+      "slug": "healthy"
+    },
+    {
+      "name": "Keto",
+      "slug": "keto"
+    },
+    {
+      "name": "Low Carb Meals",
+      "slug": "low-carb-meals"
+    },
+    {
+      "name": "Weekend Meal Prep",
+      "slug": "meal-prep"
+    },
+    {
+      "name": "Romantic Dinners",
+      "slug": "romantic-dinners"
+    },
+    {
+      "name": "Dinner",
+      "slug": "dinner"
+    },
+    {
+      "slug": "american",
+      "name": "American"
+    }
+  ],
+  "total_time_tier": {
+    "tier": "under_30_minutes",
+    "display_tier": "Under 30 minutes"
+  },
+  "brand_id": null,
+  "draft_status": "published",
+  "instructions": [
+    {
+      "start_time": 0,
+      "appliance": null,
+      "end_time": 14117,
+      "temperature": null,
+      "id": 3028,
+      "position": 1,
+      "display_text": "Season the chicken with the salt and pepper. Heat the olive oil in a large pan over medium-high heat. Add the chicken and stir-fry until no longer pink on the outside, about 4 minutes. Add the garlic and continue cooking until the chicken is cooked through, about 4 minutes more."
+    },
+    {
+      "start_time": 13467,
+      "appliance": null,
+      "end_time": 19467,
+      "temperature": null,
+      "id": 3029,
+      "position": 2,
+      "display_text": "Add the asparagus, lemon zest, and lemon juice and toss to combine. Cook until the asparagus is tender, about 2 minutes, then stir in the soy sauce."
+    },
+    {
+      "end_time": 36967,
+      "temperature": null,
+      "id": 3031,
+      "position": 3,
+      "display_text": "Serve the stir-fry over rice with more lemon zest on top.",
+      "start_time": 32232,
+      "appliance": null
+    },
+    {
+      "temperature": null,
+      "id": 3032,
+      "position": 4,
+      "display_text": "Enjoy!",
+      "start_time": 37967,
+      "appliance": null,
+      "end_time": 41133
+    }
+  ],
+  "tips_and_ratings_enabled": true,
+  "created_at": 1493236014,
+  "is_shoppable": true,
+  "video_id": 6754,
+  "country": "ZZ",
+  "prep_time_minutes": null,
+  "yields": "Serves 3-4",
+  "promotion": "full",
+  "brand": null,
+  "slug": "lemon-chicken-and-asparagus-stir-fry",
+  "sections": [
+    {
+      "components": [
+        {
+          "id": 5266,
+          "position": 1,
+          "measurements": [
+            {
+              "unit": {
+                "system": "imperial",
+                "name": "tablespoon",
+                "display_plural": "tablespoons",
+                "display_singular": "tablespoon",
+                "abbreviation": "tbsp"
+              },
+              "quantity": "½",
+              "id": 736664
+            }
+          ],
+          "raw_text": "½ tablespoon olive oil",
+          "extra_comment": "",
+          "ingredient": {
+            "display_plural": "olive oils",
+            "id": 4,
+            "display_singular": "olive oil",
+            "updated_at": 1509035290,
+            "name": "olive oil",
+            "created_at": 1493306183
+          }
+        },
+        {
+          "position": 2,
+          "measurements": [
+            {
+              "unit": {
+                "display_singular": "",
+                "abbreviation": "",
+                "system": "none",
+                "name": "",
+                "display_plural": ""
+              },
+              "quantity": "2",
+              "id": 736656
+            }
+          ],
+          "raw_text": "2 chicken breasts",
+          "extra_comment": "sliced",
+          "ingredient": {
+            "updated_at": 1530912338,
+            "name": "boneless, skinless chicken breasts",
+            "created_at": 1530912338,
+            "display_plural": "boneless, skinless chicken breasts",
+            "id": 4458,
+            "display_singular": "boneless, skinless chicken breast"
+          },
+          "id": 5267
+        },
+        {
+          "extra_comment": "",
+          "ingredient": {
+            "updated_at": 1509035289,
+            "name": "kosher salt",
+            "created_at": 1493307153,
+            "display_plural": "kosher salts",
+            "id": 11,
+            "display_singular": "kosher salt"
+          },
+          "id": 5268,
+          "position": 3,
+          "measurements": [
+            {
+              "unit": {
+                "display_singular": "teaspoon",
+                "abbreviation": "tsp",
+                "system": "imperial",
+                "name": "teaspoon",
+                "display_plural": "teaspoons"
+              },
+              "quantity": "1",
+              "id": 736657
+            }
+          ],
+          "raw_text": "1 teaspoon salt"
+        },
+        {
+          "id": 5269,
+          "position": 4,
+          "measurements": [
+            {
+              "id": 736666,
+              "unit": {
+                "display_plural": "teaspoons",
+                "display_singular": "teaspoon",
+                "abbreviation": "tsp",
+                "system": "imperial",
+                "name": "teaspoon"
+              },
+              "quantity": "½"
+            }
+          ],
+          "raw_text": "½ teaspoon pepper",
+          "extra_comment": "",
+          "ingredient": {
+            "id": 166,
+            "display_singular": "freshly ground black pepper",
+            "updated_at": 1509035282,
+            "name": "freshly ground black pepper",
+            "created_at": 1493925438,
+            "display_plural": "freshly ground black peppers"
+          }
+        },
+        {
+          "raw_text": "1 tablespoon garlic",
+          "extra_comment": "",
+          "ingredient": {
+            "display_plural": "minced garlics",
+            "id": 390,
+            "display_singular": "minced garlic",
+            "updated_at": 1509035264,
+            "name": "minced garlic",
+            "created_at": 1494981530
+          },
+          "id": 5270,
+          "position": 5,
+          "measurements": [
+            {
+              "quantity": "1",
+              "id": 736659,
+              "unit": {
+                "system": "imperial",
+                "name": "tablespoon",
+                "display_plural": "tablespoons",
+                "display_singular": "tablespoon",
+                "abbreviation": "tbsp"
+              }
+            }
+          ]
+        },
+        {
+          "raw_text": "100 grams asparagus",
+          "extra_comment": "",
+          "ingredient": {
+            "display_plural": "asparagus",
+            "id": 328,
+            "display_singular": "asparagu",
+            "updated_at": 1509035269,
+            "name": "asparagus",
+            "created_at": 1494877953
+          },
+          "id": 5271,
+          "position": 6,
+          "measurements": [
+            {
+              "id": 736662,
+              "unit": {
+                "system": "imperial",
+                "name": "ounce",
+                "display_plural": "oz",
+                "display_singular": "oz",
+                "abbreviation": "oz"
+              },
+              "quantity": "4"
+            },
+            {
+              "unit": {
+                "system": "metric",
+                "name": "gram",
+                "display_plural": "g",
+                "display_singular": "g",
+                "abbreviation": "g"
+              },
+              "quantity": "100",
+              "id": 736660
+            }
+          ]
+        },
+        {
+          "measurements": [
+            {
+              "quantity": "½",
+              "id": 736663,
+              "unit": {
+                "name": "",
+                "display_plural": "",
+                "display_singular": "",
+                "abbreviation": "",
+                "system": "none"
+              }
+            }
+          ],
+          "raw_text": "Zest of ½ lemon",
+          "extra_comment": "zested, plus more for garnish",
+          "ingredient": {
+            "updated_at": 1509035282,
+            "name": "lemon",
+            "created_at": 1493906426,
+            "display_plural": "lemons",
+            "id": 155,
+            "display_singular": "lemon"
+          },
+          "id": 5272,
+          "position": 7
+        },
+        {
+          "raw_text": "Juice of ½ lemon",
+          "extra_comment": "juiced",
+          "ingredient": {
+            "updated_at": 1509035282,
+            "name": "lemon",
+            "created_at": 1493906426,
+            "display_plural": "lemons",
+            "id": 155,
+            "display_singular": "lemon"
+          },
+          "id": 5273,
+          "position": 8,
+          "measurements": [
+            {
+              "quantity": "½",
+              "id": 736661,
+              "unit": {
+                "system": "none",
+                "name": "",
+                "display_plural": "",
+                "display_singular": "",
+                "abbreviation": ""
+              }
+            }
+          ]
+        },
+        {
+          "ingredient": {
+            "created_at": 1493314932,
+            "display_plural": "soy sauces",
+            "id": 28,
+            "display_singular": "soy sauce",
+            "updated_at": 1509035287,
+            "name": "soy sauce"
+          },
+          "id": 5274,
+          "position": 9,
+          "measurements": [
+            {
+              "unit": {
+                "name": "tablespoon",
+                "display_plural": "tablespoons",
+                "display_singular": "tablespoon",
+                "abbreviation": "tbsp",
+                "system": "imperial"
+              },
+              "quantity": "3",
+              "id": 736658
+            }
+          ],
+          "raw_text": "3 tablespoons soy sauce",
+          "extra_comment": ""
+        },
+        {
+          "raw_text": "Rice, to serve",
+          "extra_comment": "for serving",
+          "ingredient": {
+            "created_at": 1496950426,
+            "display_plural": "cooked rices",
+            "id": 1668,
+            "display_singular": "cooked rice",
+            "updated_at": 1509035173,
+            "name": "cooked rice"
+          },
+          "id": 5276,
+          "position": 10,
+          "measurements": [
+            {
+              "unit": {
+                "name": "",
+                "display_plural": "",
+                "display_singular": "",
+                "abbreviation": "",
+                "system": "none"
+              },
+              "quantity": "0",
+              "id": 736665
+            }
+          ]
+        }
+      ],
+      "name": null,
+      "position": 1
+    }
+  ]
+}
