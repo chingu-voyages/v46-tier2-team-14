@@ -10,10 +10,6 @@ export default function RecipeMeta() {
   const isBigScreen = useMedia("(min-width: 768px)");
   // const isBigScreen = useMedia("(min-width: 1024px");
 
-  if (!recipe.nutrition) {
-    return null; // Or render a fallback UI if recipe.nutrition is null
-  }
-
   // view for tablet and up
   if (isBigScreen)
     return (
@@ -25,7 +21,7 @@ export default function RecipeMeta() {
           <MetaBadges />
           <TimeInfo />
           <p className={styles.description}>{recipe.description}</p>
-          <Nutrition nutrition={recipe.nutrition} />
+          <Nutrition />
         </div>
       </section>
     );
@@ -38,7 +34,7 @@ export default function RecipeMeta() {
       <img src={recipe.thumbnail_url} alt="" className={styles.image} />
       <TimeInfo />
       <p className={styles.description}>{recipe.description}</p>
-      <Nutrition nutrition={recipe.nutrition} />
+      <Nutrition />
     </section>
   );
 }
