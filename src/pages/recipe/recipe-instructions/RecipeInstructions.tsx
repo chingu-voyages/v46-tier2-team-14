@@ -1,3 +1,25 @@
+import useRecipe from "../../../hooks/useRecipe";
+import styles from "../recipe.module.css";
+
 export default function RecipeInstructions() {
-  return <div>RecipeInstructions</div>;
+  const recipe = useRecipe();
+  if (
+    !recipe.instructions ||
+    !Array.isArray(recipe.instructions) ||
+    recipe.instructions.length === 0
+  ) {
+    return null;
+  }
+  return (
+    <section>
+      <h2>Instructions</h2>
+      <div className={styles.instructions}>
+        <ol>
+          {recipe.instructions.map((instruction) => (
+            <li key={instruction.id}>{instruction.display_text}</li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  );
 }
