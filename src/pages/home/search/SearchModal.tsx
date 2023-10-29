@@ -2,21 +2,24 @@ import { Dialog, Transition } from "@headlessui/react";
 import { useEffect, useState } from "react";
 import { BiSearch } from "react-icons/bi";
 
-import useLocalStorage from '../../../hooks/useLocalStorage'
+import useLocalStorage from "../../../hooks/useLocalStorage";
 import styles from "./searchModal.module.css";
 
 // This component use headlessUi react library for modal
 function SearchModal() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [savedSearch, setSavedSearch] = useLocalStorage("SWAD_SAVED_SEARCH", []);
-  
+  const [savedSearch, setSavedSearch] = useLocalStorage(
+    "SWAD_SAVED_SEARCH",
+    [],
+  );
+
   /**
    * Function to check the operating system
    * @returns boolean value if it is apple or not
    */
   const isAppleOS = () => {
     const platform =
-      navigator?.userAgentData?.platform || navigator?.platform || "unknown";
+      navigator.userAgentData?.platform || navigator?.platform || "unknown";
     return /(MAC|iPhone|iPod|iPad)/i.test(platform);
   };
 
@@ -29,12 +32,12 @@ function SearchModal() {
     }
   };
 
-   const onSearch =(event:React.ChangeEvent<HTMLInputElement>)=>{
+  const onSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     const recentSearch = [...savedSearch];
     // currently it is saving each word is typed, need to handle with debounce
-    recentSearch.push(event.target.value)
-    setSavedSearch(recentSearch)
-   }
+    recentSearch.push(event.target.value);
+    setSavedSearch(recentSearch);
+  };
   useEffect(() => {
     window.addEventListener("keydown", onKeyDown);
 
@@ -52,7 +55,10 @@ function SearchModal() {
         onClick={() => setIsOpen(true)}
       >
         <BiSearch size={24} aria-hidden />
-        <p className={styles.text}>Search recipes...</p>
+        <div className={styles.text}>
+          <p>Search recipes...</p>
+        </div>
+
         <span className={styles.keyBoardShortcut}>{keyBoardShortCut}</span>
       </button>
       <Transition show={isOpen}>

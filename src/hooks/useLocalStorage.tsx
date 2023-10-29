@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const useLocalStorage = (key: string, defaultValue: Array<string>) => {
+const useLocalStorage = <T,>(key: string, defaultValue: T) => {
   const [value, setValue] = React.useState(() => {
     const saved = localStorage.getItem(key);
     if (saved !== null) {
