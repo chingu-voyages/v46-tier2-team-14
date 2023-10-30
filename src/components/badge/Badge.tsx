@@ -1,18 +1,19 @@
 import styles from "./badge.module.css";
 
+// naive polymorphic component
 type Props = { children: React.ReactNode } & (
-  | { as?: "span" }
+  | { as?: "span"; href?: never; target?: never }
   | { as: "a"; href: string; target?: string }
 );
 
 export default function Badge({
   children,
   as: Component = "span",
-  ...props
+  href,
+  target,
 }: Props) {
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Component className={styles.badge} {...props}>
+    <Component className={styles.badge} href={href} target={target}>
       {children}
     </Component>
   );
