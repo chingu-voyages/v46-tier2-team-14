@@ -2,11 +2,13 @@ import { AiOutlineLike } from "react-icons/ai";
 import { BiBowlHot, BiLinkExternal } from "react-icons/bi";
 
 import Badge from "../../../../components/badge/Badge";
+import useMedia from "../../../../hooks/useMedia";
 import useRecipe from "../../../../hooks/useRecipe";
 import styles from "./meta-badges.module.css";
 
 export default function MetaBadges() {
   const recipe = useRecipe();
+  const isMediumScreen = useMedia("(min-width: 768px");
 
   return (
     <div className={styles.badges}>
@@ -27,7 +29,7 @@ export default function MetaBadges() {
               (recipe.user_ratings.count_positive +
                 recipe.user_ratings.count_negative),
           )}{" "}
-          would make again
+          {isMediumScreen ? "would make again" : "likes"}
         </Badge>
       )}
       {recipe.original_video_url && (
