@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 0.75fr 1fr;
   grid-column: 1/-1;
-  gap: 2.5em;
+  gap: var(--layout-gap);
 }
 
 .right {
