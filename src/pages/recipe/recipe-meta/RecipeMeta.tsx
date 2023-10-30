@@ -7,8 +7,7 @@ import TimeInfo from "./time-info/TimeInfo";
 
 export default function RecipeMeta() {
   const recipe = useRecipe();
-  const isBigScreen = useMedia("(min-width: 768px)");
-  // const isBigScreen = useMedia("(min-width: 1024px");
+  const isBigScreen = useMedia("(min-width: 1024px");
 
   // view for tablet and up
   if (isBigScreen)
