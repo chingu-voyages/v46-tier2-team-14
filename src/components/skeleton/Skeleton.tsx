@@ -1,8 +1,8 @@
 import styles from "./Skeleton.module.css";
 
-interface SkeletonI {
-  width?: number;
-  height?: number;
+export interface SkeletonI {
+  width?: number | string;
+  height?: number | string;
   type?: "circle" | "rectangle" | "rounded";
 }
 
@@ -12,8 +12,8 @@ export default function Skeleton({ width, height, type }: SkeletonI) {
       className={`${styles.skeleton} ${type ? styles[type] : ""} `}
       aria-busy
       style={{
-        width: `${width}rem`,
-        height: `${height}rem`,
+        width: typeof width === "number" ? `${width}rem` : width,
+        height: typeof height === "number" ? `${height}rem` : height,
       }}
     />
   );

@@ -1,0 +1,52 @@
+.recipe {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem;
+  gap: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.2s ease-in-out;
+}
+
+.recipe:hover {
+  transform: scale(1.025);
+}
+
+.skeleton_wrapper {
+  aspect-ratio: 1/1;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  flex: 1;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  /* 
+  https://jakearchibald.com/2022/img-aspect-ratio/,
+  https://stackoverflow.com/questions/70454127/image-jumps-during-page-load-object-fit-cover#:~:text=Since%20the%20image%20is%20status,and%20fix%20this%20jumping%20issue (same issue here, idk how to fix :/ )
+  */
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+.name {
+  font-size: var(--text-base);
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+.arrow {
+  stroke-width: 0.85px;
+  fill: var(--accent);
+  stroke: var(--accent);
+  flex-shrink: 0;
+}
