@@ -2,6 +2,9 @@ import { Dialog, Transition } from "@headlessui/react";
 import { useEffect, useState } from "react";
 import { BiSearch } from "react-icons/bi";
 
+import OptionList, {
+  OptionI,
+} from "../../../components/option-list/OptionList";
 import useLocalStorage from "../../../hooks/useLocalStorage";
 import styles from "./searchModal.module.css";
 
@@ -12,6 +15,7 @@ function SearchModal() {
     "SWAD_SAVED_SEARCH",
     [],
   );
+  const [inputValue, setInputValue] = useState("");
 
   /**
    * Function to check the operating system
@@ -32,12 +36,29 @@ function SearchModal() {
     }
   };
 
-  const onSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const recentSearch = [...savedSearch];
-    // currently it is saving each word is typed, need to handle with debounce
-    recentSearch.push(event.target.value);
-    setSavedSearch(recentSearch);
+  const onInputValueChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(event.target.value);
   };
+
+  const onSearch = (newSearch: string) => {
+    // const recentSearch = [...savedSearch];
+    // currently it is saving each word is typed, need to handle with debounce
+    // recentSearch.push(event.target.value);
+    // setSavedSearch(recentSearch);
+    const newRecentSearches = [...savedSearch, newSearch];
+    setIsOpen(false);
+    setSavedSearch(newRecentSearches);
+  };
+
+  const handelFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    onSearch(inputValue);
+  };
+
+  const handelSelect = (newSelectedOption: OptionI) => {
+    onSearch(newSelectedOption.label);
+  };
+
   useEffect(() => {
     window.addEventListener("keydown", onKeyDown);
 
@@ -45,6 +66,20 @@ function SearchModal() {
       window.removeEventListener("keydown", onKeyDown);
     };
   });
+
+  const prevOpt = Array(5)
+    .fill(0)
+    .map((_, index) => ({
+      label: `${(index + 1) * (index + 1)}`,
+      value: index + 1,
+    }));
+
+  const option = Array(10)
+    .fill(0)
+    .map((_, index) => ({
+      label: `${(index + 1) * (index + 1)}`,
+      value: index + 1,
+    }));
 
   return (
     <>
@@ -86,13 +121,14 @@ function SearchModal() {
             leaveTo={`${styles.opacity_0} ${styles.scale_95}`}
           >
             <Dialog.Panel className={styles.dialog_panel}>
-              <form className={styles.form}>
+              <form onSubmit={handelFormSubmit} className={styles.form}>
                 <BiSearch size={50} className={styles.icon} aria-hidden />
                 <input
                   type="text"
                   placeholder="Search..."
                   className={styles.form_input}
-                  onChange={onSearch} // callback function for taking input and making api call
+                  value={inputValue}
+                  onChange={onInputValueChange} // callback function for taking input and making api call
                 />
                 <div className={styles.form_button_container}>
                   <button type="button" className={styles.form_esc_button}>
@@ -100,6 +136,11 @@ function SearchModal() {
                   </button>
                 </div>
               </form>
+              <OptionList
+                prevOpt={prevOpt}
+                option={option}
+                onSelect={handelSelect}
+              />
             </Dialog.Panel>
           </Transition.Child>
         </Dialog>

@@ -1,0 +1,33 @@
+.list {
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+  background-color: var(--secondary);
+  color: var(--text);
+  overflow-y: auto;
+  max-height: 600px;
+  margin-top: 0;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.listItem {
+  width: 100%;
+  display: flex;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.listItem:hover {
+  background-color: var(--primary);
+}
+
+.listItem > span {
+  flex-grow: 1;
+  text-align: left;
+  margin-left: 1rem;
+}
