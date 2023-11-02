@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.nutri {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--card);
+  padding: 1rem;
+  width: 20%;
+  border-color: var(--border);
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.nutri span {
+  text-align: center;
+  /* flex: 1; */
+  font-weight: 600;
+  font-size: var(--text-sm);
+}
+
+.nutri h3 {
+  font-weight: 300;
+  font-size: var(--text-base);
+}
+
+@media (max-width: 962px) {
+  .nutri {
+    width: 18%;
+  }
+  .nutri span,
+  h3 {
+    font-size: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .nutri {
+    width: 15%;
+  }
+  .nutri span,
+  h3 {
+    font-size: 75%;
+  }
+}
