@@ -11,28 +11,45 @@ export default function Nutrition() {
       <h2>Nutrition per serving</h2>
       <div className={styles.container}>
         <div className={styles.nutri}>
+          <div className={styles.nutriValue}>
+            <h3>{recipe.nutrition.calories}</h3>
+          </div>
           <span>Calories</span>
-          <h3>{recipe.nutrition.calories}Kcal</h3>
         </div>
         <div className={styles.nutri}>
+          <div className={styles.nutriValue}>
+            <h3>{recipe.nutrition.carbohydrates}g</h3>
+          </div>
+
           <span>Carbs</span>
-          <h3>{recipe.nutrition.carbohydrates}gm</h3>
         </div>
         <div className={styles.nutri}>
+          <div className={styles.nutriValue}>
+            <h3>{recipe.nutrition.fat}g</h3>
+          </div>
+
           <span>Fat</span>
-          <h3>{recipe.nutrition.fat}gm</h3>
         </div>
         <div className={styles.nutri}>
+          <div className={styles.nutriValue}>
+            <h3>{recipe.nutrition.protein}g</h3>
+          </div>
+
           <span>Protein</span>
-          <h3>{recipe.nutrition.protein}gm</h3>
         </div>
         <div className={styles.nutri}>
+          <div className={styles.nutriValue}>
+            <h3>{recipe.nutrition.sugar}g</h3>
+          </div>
+
           <span>Sugar</span>
-          <h3>{recipe.nutrition.sugar}gm</h3>
         </div>
         <div className={styles.nutri}>
+          <div className={styles.nutriValue}>
+            <h3>{recipe.nutrition.fiber}g</h3>
+          </div>
+
           <span>Fiber</span>
-          <h3>{recipe.nutrition.fiber}gm</h3>
         </div>
       </div>
     </>
