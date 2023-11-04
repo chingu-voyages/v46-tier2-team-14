@@ -61,9 +61,6 @@ function SearchModal() {
     });
     setSavedSearch((prev) => [...prev, newSearch]);
     setIsOpen(false);
-
-    //
-
     navigate("/", {
       state: { searchText: newSearch },
     });
@@ -78,8 +75,6 @@ function SearchModal() {
     setInputValue(newSelectedOption.label);
     onSearch(newSelectedOption.label);
   };
-
-  // const fetchSuggestion = () => {};
 
   useEffect(() => {
     let t: number | undefined;
@@ -98,13 +93,6 @@ function SearchModal() {
       window.removeEventListener("keydown", onKeyDown);
     };
   });
-
-  // const prevOpt = Array(5)
-  //   .fill(0)
-  //   .map((_, index) => ({
-  //     label: `${(index + 1) * (index + 1)}`,
-  //     value: index + 1,
-  //   }));
 
   const option = useMemo(
     () =>
