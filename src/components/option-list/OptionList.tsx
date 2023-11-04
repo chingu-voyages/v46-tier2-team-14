@@ -19,11 +19,10 @@ interface OptionListI {
 }
 
 function OptionList({ prevOpt, option, onSelect, loading }: OptionListI) {
-  const t = [1, 2, 3, 4, 5];
   return (
     <ul className={styles.list}>
       {prevOpt.map((item) => (
-        <li key={item.label + item.value}>
+        <li key={item.value as string}>
           <button
             className={styles.listItem}
             type="button"
@@ -36,13 +35,18 @@ function OptionList({ prevOpt, option, onSelect, loading }: OptionListI) {
         </li>
       ))}
       {loading &&
-        t.map((item) => (
-          <li className={styles["listItem--skeleton"]} key={`${item}`}>
-            <Skeleton type="circle" width={1.5} height={1.5} />
-            <Skeleton width="100%" height={1} />
-            <Skeleton type="rectangle" width={1.5} height={1.5} />
-          </li>
-        ))}
+        Array(5)
+          .fill(0)
+          .map((item) => (
+            <li
+              className={styles["listItem--skeleton"]}
+              key={`${item + Math.random() * 500}`}
+            >
+              <Skeleton type="circle" width={1.5} height={1.5} />
+              <Skeleton width="100%" height={1} />
+              <Skeleton type="rectangle" width={1.5} height={1.5} />
+            </li>
+          ))}
 
       {!loading &&
         option.map((item) => (

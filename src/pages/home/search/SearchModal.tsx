@@ -54,10 +54,19 @@ function SearchModal() {
   };
 
   const onSearch = (newSearch: string) => {
-    const newRecentSearches = [...savedSearch, newSearch];
+    setSavedSearch((prev) => {
+      const updatedSearch = [...prev, newSearch];
+      const uniqueSearch = [...new Set(updatedSearch)];
+      return uniqueSearch;
+    });
+    setSavedSearch((prev) => [...prev, newSearch]);
     setIsOpen(false);
-    setSavedSearch([...newRecentSearches]);
-    navigate(`${inputValue}`);
+
+    //
+
+    navigate("/", {
+      state: { searchText: newSearch },
+    });
   };
 
   const handelFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
