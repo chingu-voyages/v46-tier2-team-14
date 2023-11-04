@@ -13,7 +13,7 @@ export default function RecipeIngredients() {
   return (
     <section>
       <h2>Ingredients</h2>
-      <div className={styles.ingrediants}>
+      <div className={styles.ingredients}>
         {recipe.sections.map((section) => (
           <div key={section.position} className={styles.ingredientSection}>
             <h2>{section.name}</h2>
