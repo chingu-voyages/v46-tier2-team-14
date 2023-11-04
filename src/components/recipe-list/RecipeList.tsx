@@ -2,7 +2,7 @@ import { MdClear } from "react-icons/md";
 import { useNavigate, useParams } from "react-router-dom";
 
 import useSearchRecipes from "../../hooks/useSearchRecipe";
-import { TryAgain } from "../error/Error";
+import { Recipe } from "../../api/recipe.types";
 import styles from "./recipe-list.module.css";
 import RecipePreview from "./recipe-preview/RecipePreview";
 import RecipesSkeleton from "./recipes-skeleton/RecipesSkeleton";
