@@ -1,7 +1,7 @@
 import * as React from "react";
 
 const useLocalStorage = <T,>(key: string, defaultValue: T) => {
-  const [value, setValue] = React.useState(() => {
+  const [savedSearch, setSavedSearch] = React.useState<string[]>(() => {
     const saved = localStorage.getItem(key);
     if (saved !== null) {
       return JSON.parse(saved);
@@ -10,9 +10,9 @@ const useLocalStorage = <T,>(key: string, defaultValue: T) => {
   });
 
   React.useEffect(() => {
-    localStorage.setItem(key, JSON.stringify(value));
-  }, [value, key]);
+    localStorage.setItem(key, JSON.stringify(savedSearch));
+  }, [savedSearch, key]);
 
-  return [value, setValue];
+  return { savedSearch, setSavedSearch };
 };
 export default useLocalStorage;

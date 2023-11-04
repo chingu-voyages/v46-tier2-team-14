@@ -1,21 +1,34 @@
 import { Dialog, Transition } from "@headlessui/react";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { BiSearch } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
+import { AutoCompleteType } from "../../../api/autoCompleteSuggestion.types";
 import OptionList, {
   OptionI,
 } from "../../../components/option-list/OptionList";
+import useAutoComplete from "../../../hooks/useAutoComplete";
 import useLocalStorage from "../../../hooks/useLocalStorage";
 import styles from "./searchModal.module.css";
-
 // This component use headlessUi react library for modal
 function SearchModal() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [savedSearch, setSavedSearch] = useLocalStorage(
+  const { savedSearch, setSavedSearch } = useLocalStorage(
     "SWAD_SAVED_SEARCH",
     [],
   );
+  const [debounceInputValue, setDebounceInputValue] = useState("");
   const [inputValue, setInputValue] = useState("");
+  const navigate = useNavigate();
+
+  const { isLoading, data } = useAutoComplete(debounceInputValue);
+
+  // console.log(isLoading, data);
+
+  const prevOpt = useMemo(() => {
+    const currMatch = savedSearch.filter((item) => item.includes(inputValue));
+    return currMatch.map((item) => ({ label: item, value: item }));
+  }, [savedSearch, inputValue]);
 
   /**
    * Function to check the operating system
@@ -41,13 +54,10 @@ function SearchModal() {
   };
 
   const onSearch = (newSearch: string) => {
-    // const recentSearch = [...savedSearch];
-    // currently it is saving each word is typed, need to handle with debounce
-    // recentSearch.push(event.target.value);
-    // setSavedSearch(recentSearch);
     const newRecentSearches = [...savedSearch, newSearch];
     setIsOpen(false);
-    setSavedSearch(newRecentSearches);
+    setSavedSearch([...newRecentSearches]);
+    navigate(`${inputValue}`);
   };
 
   const handelFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -56,8 +66,21 @@ function SearchModal() {
   };
 
   const handelSelect = (newSelectedOption: OptionI) => {
+    setInputValue(newSelectedOption.label);
     onSearch(newSelectedOption.label);
   };
+
+  // const fetchSuggestion = () => {};
+
+  useEffect(() => {
+    let t: number | undefined;
+    if (inputValue) {
+      t = setTimeout(() => setDebounceInputValue(inputValue), 200);
+    }
+    return () => {
+      clearTimeout(t);
+    };
+  }, [inputValue]);
 
   useEffect(() => {
     window.addEventListener("keydown", onKeyDown);
@@ -67,19 +90,23 @@ function SearchModal() {
     };
   });
 
-  const prevOpt = Array(5)
-    .fill(0)
-    .map((_, index) => ({
-      label: `${(index + 1) * (index + 1)}`,
-      value: index + 1,
-    }));
+  // const prevOpt = Array(5)
+  //   .fill(0)
+  //   .map((_, index) => ({
+  //     label: `${(index + 1) * (index + 1)}`,
+  //     value: index + 1,
+  //   }));
 
-  const option = Array(10)
-    .fill(0)
-    .map((_, index) => ({
-      label: `${(index + 1) * (index + 1)}`,
-      value: index + 1,
-    }));
+  const option = useMemo(
+    () =>
+      !data
+        ? []
+        : data.map((item: AutoCompleteType) => ({
+            label: item.display,
+            value: item.display,
+          })),
+    [data],
+  );
 
   return (
     <>
@@ -140,6 +167,7 @@ function SearchModal() {
                 prevOpt={prevOpt}
                 option={option}
                 onSelect={handelSelect}
+                loading={isLoading}
               />
             </Dialog.Panel>
           </Transition.Child>

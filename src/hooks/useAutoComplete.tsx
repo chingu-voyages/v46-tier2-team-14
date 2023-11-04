@@ -6,6 +6,7 @@ export default function useAutoComplete(searchText: string) {
   return useQuery({
     queryKey: ["autocomplete", searchText],
     queryFn: ({ signal }) => autoCompleteSuggestion(searchText, { signal }),
-    retry: 3,
+    retry: 0,
+    enabled: !!searchText,
   });
 }
