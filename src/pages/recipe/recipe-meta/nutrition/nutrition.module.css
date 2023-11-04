@@ -1,52 +1,39 @@
+.nutrition {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
 .container {
   display: flex;
-  align-items: center;
-  justify-items: center;
-  flex-direction: row;
   gap: 5px;
+  overflow: scroll;
 }
-
 .nutri {
+  background-color: var(--secondary);
   display: flex;
+  flex-direction: column-reverse;
+  gap: 0.5em;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: var(--card);
-  padding: 1rem;
-  width: 20%;
-  border-color: var(--border);
-  border-radius: 10px;
-  border-width: 1px;
-  border-style: solid;
-}
-
-.nutri span {
-  text-align: center;
-  /* flex: 1; */
-  font-weight: 600;
+  text-transform: lowercase;
   font-size: var(--text-sm);
+  border-radius: 9999px;
+  padding: 0.5em;
 }
 
 .nutri h3 {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--background);
+
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 300;
   font-size: var(--text-base);
 }
 
-@media (max-width: 962px) {
-  .nutri {
-    width: 18%;
-  }
-  .nutri span,
-  h3 {
-    font-size: 80%;
-  }
-}
-@media (max-width: 768px) {
-  .nutri {
-    width: 15%;
-  }
-  .nutri span,
-  h3 {
-    font-size: 75%;
-  }
+.nutri span {
+  margin-bottom: 0.75em;
 }
