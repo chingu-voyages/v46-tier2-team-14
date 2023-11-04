@@ -11,15 +11,15 @@ export default function Home() {
   const { data, isLoading } = useSearchRecipes({
     from: 0,
     size: 20,
-    q: location.state.searchText,
+    q: location.state?.searchText,
   });
 
-  console.log("HOME", isLoading, location.state.searchText);
+  console.log("HOME", isLoading, location.state?.searchText);
 
   return (
     <main className={styles.main}>
       <Hero />
-      <RecipeList recipes={data || []} query={location.state.searchText} />
+      <RecipeList recipes={data || []} query={location.state?.searchText} />
       {/* TODO: component for under 30mins recipes here */}
     </main>
   );
