@@ -17,4 +17,7 @@
 .instructions ol {
   margin: 0;
   padding: 0 0 0 var(--section-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
