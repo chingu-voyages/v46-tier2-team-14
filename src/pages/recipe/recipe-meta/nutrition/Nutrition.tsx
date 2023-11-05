@@ -7,9 +7,9 @@ export default function Nutrition() {
     return null;
   }
   return (
-    <>
+    <section className={styles.container}>
       <h2>Nutrition per serving</h2>
-      <div className={styles.container}>
+      <div className={styles.nutritions}>
         <div className={styles.nutri}>
           <span>Calories</span>
           <h3>{recipe.nutrition.calories} </h3>
@@ -35,6 +35,6 @@ export default function Nutrition() {
           <h3>{recipe.nutrition.fiber}gm</h3>
         </div>
       </div>
-    </>
+    </section>
   );
 }
