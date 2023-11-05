@@ -19,11 +19,13 @@
   font-size: var(--text-sm);
   border-radius: 9999px;
   padding: 0.5em;
+  border: 0.5px solid var(--border);
 }
 
 .nutri h3 {
-  width: 4rem;
-  height: 4rem;
+  --size: 4rem;
+  width: var(--size);
+  height: var(--size);
   background-color: var(--background);
 
   border-radius: 100%;
@@ -32,6 +34,7 @@
   align-items: center;
   font-weight: 300;
   font-size: var(--text-base);
+  border: 1px solid var(--border);
 }
 
 .nutri span {

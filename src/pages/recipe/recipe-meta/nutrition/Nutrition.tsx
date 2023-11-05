@@ -12,7 +12,7 @@ export default function Nutrition() {
       <div className={styles.container}>
         <div className={styles.nutri}>
           <span>Calories</span>
-          <h3>{recipe.nutrition.calories}Kcal</h3>
+          <h3>{recipe.nutrition.calories} </h3>
         </div>
         <div className={styles.nutri}>
           <span>Carbs</span>
