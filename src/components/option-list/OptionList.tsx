@@ -1,7 +1,8 @@
-// import React from 'react'
+import { useEffect, useRef, useState } from "react";
 import { BiSearch } from "react-icons/bi";
 import { BsArrowUpRight } from "react-icons/bs";
 import { PiClockCounterClockwise } from "react-icons/pi";
+import { Link } from "react-router-dom";
 
 import Skeleton from "../skeleton/Skeleton";
 import styles from "./OptionList.module.css";
@@ -14,24 +15,80 @@ export type OptionI = {
 interface OptionListI {
   prevOpt: OptionI[];
   option: OptionI[];
-  onSelect: (selectedOpt: OptionI) => void;
   loading?: boolean;
+  onHoverOption?: (hoveredOpt: OptionI | undefined, index: number) => void;
 }
 
-function OptionList({ prevOpt, option, onSelect, loading }: OptionListI) {
+function OptionList({
+  prevOpt,
+  option,
+  loading,
+  onHoverOption = () => null,
+}: OptionListI) {
+  const [currInd, setCurrInd] = useState(-1);
+  const listRef = useRef<HTMLUListElement>(null);
+
+  useEffect(() => {
+    const listOptions = listRef.current
+      ?.childNodes as unknown as HTMLLIElement[];
+    if (listRef.current) {
+      listOptions.forEach((li: HTMLLIElement, ind: number) => {
+        const handleMouseMove = () => {
+          setCurrInd(ind);
+        };
+        li.addEventListener("mousemove", handleMouseMove);
+      });
+    }
+
+    setCurrInd(-1);
+  }, [prevOpt, option]);
+
+  useEffect(() => {
+    const handelKeyDown = (e: KeyboardEvent) => {
+      let newCurrInd = currInd;
+      if (e.key === "ArrowUp") {
+        newCurrInd =
+          currInd - 1 < 0 ? prevOpt.length + option.length - 1 : currInd - 1;
+      } else if (e.key === "ArrowDown") {
+        newCurrInd =
+          currInd + 1 > prevOpt.length + option.length - 1 ? 0 : currInd + 1;
+      }
+      setCurrInd(newCurrInd);
+    };
+    window.addEventListener("keydown", handelKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handelKeyDown);
+    };
+  }, [currInd, option.length, prevOpt.length]);
+
+  useEffect(() => {
+    if (currInd !== -1) {
+      const listOptions = listRef.current
+        ?.childNodes as unknown as HTMLLIElement[];
+      (
+        listOptions[currInd]?.children[0] as unknown as HTMLButtonElement
+      )?.scrollIntoView({
+        block: "nearest",
+      });
+
+      onHoverOption([...prevOpt, ...option][currInd], currInd);
+    } else onHoverOption(undefined, -1);
+  }, [currInd, onHoverOption, option, prevOpt]);
+
   return (
-    <ul className={styles.list}>
-      {prevOpt.map((item) => (
+    <ul className={styles.list} ref={listRef}>
+      {prevOpt.map((item, ind) => (
         <li key={item.value as string}>
-          <button
-            className={styles.listItem}
-            type="button"
-            onClick={() => onSelect(item)}
+          <Link
+            to={`/${item.label}`}
+            className={`${styles.listItem} ${
+              ind === currInd ? styles["listItem--hover"] : ""
+            }`}
           >
             <PiClockCounterClockwise size={24} />
             <span>{item.label}</span>
             <BsArrowUpRight size={24} />
-          </button>
+          </Link>
         </li>
       ))}
       {loading &&
@@ -49,25 +106,36 @@ function OptionList({ prevOpt, option, onSelect, loading }: OptionListI) {
           ))}
 
       {!loading &&
-        option.map((item) => (
+        option.map((item, ind) => (
           <li key={item.label + item.value}>
-            <button
-              className={styles.listItem}
+            <Link
+              to={`${item.label}`}
+              className={`${styles.listItem} ${
+                ind === currInd - prevOpt.length
+                  ? styles["listItem--hover"]
+                  : ""
+              }`}
               type="button"
-              onClick={() => onSelect(item)}
             >
               <BiSearch size={24} />
               <span>{item.label}</span>
               <BsArrowUpRight size={24} />
-            </button>
+            </Link>
           </li>
         ))}
+
+      {!loading && !prevOpt.length && !option.length && (
+        <li className={`${styles.listItem} ${styles.nothingFound}`}>
+          Nothing Found
+        </li>
+      )}
     </ul>
   );
 }
 
 OptionList.defaultProps = {
   loading: false,
+  onHoverOption: () => {},
 };
 
 export default OptionList;

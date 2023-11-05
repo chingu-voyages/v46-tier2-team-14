@@ -19,11 +19,12 @@ function SearchModal() {
   );
   const [debounceInputValue, setDebounceInputValue] = useState("");
   const [inputValue, setInputValue] = useState("");
+  const [currentHoveredOpt, setCurrHoveredOption] = useState<
+    OptionI | undefined
+  >(undefined);
   const navigate = useNavigate();
 
   const { isLoading, data } = useAutoComplete(debounceInputValue);
-
-  // console.log(isLoading, data);
 
   const prevOpt = useMemo(() => {
     const currMatch = savedSearch.filter((item) => item.includes(inputValue));
@@ -51,6 +52,7 @@ function SearchModal() {
 
   const onInputValueChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
+    setCurrHoveredOption(undefined);
   };
 
   const onSearch = (newSearch: string) => {
@@ -59,21 +61,15 @@ function SearchModal() {
       const uniqueSearch = [...new Set(updatedSearch)];
       return uniqueSearch;
     });
-    setSavedSearch((prev) => [...prev, newSearch]);
     setIsOpen(false);
-    navigate("/", {
-      state: { searchText: newSearch },
-    });
+    setInputValue("");
+    navigate(`/${newSearch}`);
   };
 
   const handelFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    onSearch(inputValue);
-  };
-
-  const handelSelect = (newSelectedOption: OptionI) => {
-    setInputValue(newSelectedOption.label);
-    onSearch(newSelectedOption.label);
+    if (currentHoveredOpt) onSearch(currentHoveredOpt.label);
+    else onSearch(inputValue);
   };
 
   useEffect(() => {
@@ -96,14 +92,18 @@ function SearchModal() {
 
   const option = useMemo(
     () =>
-      !data
+      !data || inputValue === ""
         ? []
         : data.map((item: AutoCompleteType) => ({
             label: item.display,
             value: item.display,
           })),
-    [data],
+    [data, inputValue],
   );
+
+  const handelOptionHover = (newOpt: OptionI | undefined) => {
+    setCurrHoveredOption(newOpt);
+  };
 
   return (
     <>
@@ -163,7 +163,7 @@ function SearchModal() {
               <OptionList
                 prevOpt={prevOpt}
                 option={option}
-                onSelect={handelSelect}
+                onHoverOption={handelOptionHover}
                 loading={isLoading}
               />
             </Dialog.Panel>

@@ -20,9 +20,10 @@
   border: none;
   color: inherit;
   cursor: pointer;
+  text-decoration: none;
 }
 
-.listItem:hover {
+.listItem--hover {
   background-color: var(--primary);
 }
 
@@ -41,4 +42,10 @@
 
 .listItem--skeleton:nth-child(2) {
   flex-grow: 1;
+}
+
+.nothingFound {
+  color: var(--text);
+  justify-content: center;
+  cursor: auto;
 }
