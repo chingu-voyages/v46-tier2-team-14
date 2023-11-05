@@ -1,5 +1,7 @@
 .recipe {
   --layout-gap: 2.5em;
+  --section-gap: 1rem;
+  --section-padding: 1.5rem;
 
   display: flex;
   flex-direction: column;

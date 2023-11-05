@@ -11,7 +11,7 @@ export default function RecipeInstructions() {
     return null;
   }
   return (
-    <section>
+    <section className={styles.container}>
       <h2>Instructions</h2>
       <div className={styles.instructions}>
         <ol>

@@ -2,14 +2,13 @@
   display: flex;
   flex-direction: column;
   gap: var(--section-gap);
-  gap: 1em;
 }
 
 .sections {
   display: flex;
   flex-direction: column;
   background-color: var(--card);
-  padding: 1.5em;
+  padding: var(--section-padding);
   gap: 1.5em;
   border-radius: var(--radius);
 }
