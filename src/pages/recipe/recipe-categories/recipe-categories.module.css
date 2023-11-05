@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  overflow: scroll;
+  grid-column: 1/-1;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  margin-bottom: -1.5em;
+}
+.container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.tags {
+  display: flex;
+  gap: 0.5em;
+}
