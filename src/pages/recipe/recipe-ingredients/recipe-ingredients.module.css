@@ -12,7 +12,6 @@
   gap: 1.5em;
   border-radius: var(--radius);
 }
-
 .section {
   display: flex;
   flex-direction: column;
@@ -118,4 +117,17 @@
 }
 .measurement {
   font-weight: 450;
+}
+
+/* making ingredients sticky in desktop view */
+@media (min-width: 1024px) {
+  .container {
+    position: sticky;
+    top: 20px;
+  }
+  .sections {
+    position: sticky;
+    max-height: calc(100vh - 70px);
+    overflow: scroll;
+  }
 }

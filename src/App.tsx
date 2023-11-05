@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 
 import Layout from "./components/layout/Layout";
 import Home from "./pages/home/Home";
-import Recipe from "./pages/recipe/Recipe";
+import Recipe from "./pages/recipe";
 
 export default function App() {
   return (

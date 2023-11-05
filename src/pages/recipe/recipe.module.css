@@ -8,9 +8,41 @@
   gap: var(--layout-gap);
 }
 
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+}
+
+.title {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+}
+
+.description {
+  font-weight: 450;
+}
+
+.image {
+  border-radius: var(--radius);
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  height: auto;
+}
+
 @media (min-width: 1024px) {
   .recipe {
     display: grid;
     grid-template-columns: 0.75fr 1fr;
   }
+
+  .right,
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: var(--layout-gap);
+  }
+}
+
+.recipe h2 {
 }

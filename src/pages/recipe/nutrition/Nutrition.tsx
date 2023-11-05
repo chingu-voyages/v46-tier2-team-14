@@ -1,4 +1,4 @@
-import useRecipe from "../../../../hooks/useRecipe";
+import useRecipe from "../../../hooks/useRecipe";
 import styles from "./nutrition.module.css";
 
 export default function Nutrition() {
