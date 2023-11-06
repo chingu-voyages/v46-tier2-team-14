@@ -4,6 +4,7 @@ export type RecipeSearchParams = {
   from: number;
   size: number;
   q?: string;
+  tags?: string;
 };
 
 export default async function searchrecipes(

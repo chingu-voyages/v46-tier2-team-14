@@ -17,6 +17,7 @@ interface OptionListI {
   option: OptionI[];
   loading?: boolean;
   onHoverOption?: (hoveredOpt: OptionI | undefined, index: number) => void;
+  onSelect?: (selectedOption: OptionI) => void;
 }
 
 function OptionList({
@@ -24,6 +25,7 @@ function OptionList({
   option,
   loading,
   onHoverOption = () => null,
+  onSelect = () => null,
 }: OptionListI) {
   const [currInd, setCurrInd] = useState(-1);
   const listRef = useRef<HTMLUListElement>(null);
@@ -80,6 +82,7 @@ function OptionList({
       {prevOpt.map((item, ind) => (
         <li key={item.value as string}>
           <Link
+            onClick={() => onSelect(item)}
             to={`/${item.label}`}
             className={`${styles.listItem} ${
               ind === currInd ? styles["listItem--hover"] : ""
@@ -109,6 +112,7 @@ function OptionList({
         option.map((item, ind) => (
           <li key={item.label + item.value}>
             <Link
+              onClick={() => onSelect(item)}
               to={`${item.label}`}
               className={`${styles.listItem} ${
                 ind === currInd - prevOpt.length
@@ -136,6 +140,7 @@ function OptionList({
 OptionList.defaultProps = {
   loading: false,
   onHoverOption: () => {},
+  onSelect: () => {},
 };
 
 export default OptionList;

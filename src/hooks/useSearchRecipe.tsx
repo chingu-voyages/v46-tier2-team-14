@@ -8,6 +8,6 @@ export default function useSearchRecipes({ ...props }: RecipeSearchParams) {
     queryKey: ["searchRecipes", JSON.stringify(props)],
     queryFn: ({ signal }) => searchrecipes({ ...props }, { signal }),
     retry: 0,
-    enabled: !!props.q,
+    enabled: !!props.q || !!props.tags,
   });
 }

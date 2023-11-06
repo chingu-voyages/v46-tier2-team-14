@@ -1,18 +1,50 @@
-import { Recipe } from "../../types/recipe.types";
+import { MdClear } from "react-icons/md";
+import { useNavigate, useParams } from "react-router-dom";
+
+import useSearchRecipes from "../../hooks/useSearchRecipe";
+// import { Recipe } from "../../types/recipe.types";
 import styles from "./recipe-list.module.css";
 import RecipePreview from "./recipe-preview/RecipePreview";
 
-type Props = {
-  recipes: Recipe[];
-  query: string;
-};
+// type Props = {
+//   recipes: Recipe[];
+//   query: string;
+// };
 
-export default function RecipeList({ recipes, query }: Props) {
+// export default function RecipeList({ recipes, query }: Props) {
+export default function RecipeList() {
+  const { searchText } = useParams();
+  const { data } = useSearchRecipes({
+    from: 0,
+    size: 20,
+    q: searchText,
+    tags: searchText ? undefined : "under_30_minutes",
+  });
+
+  const navigate = useNavigate();
+
+  const handelClear = () => {
+    navigate("/");
+  };
   return (
     <section className={styles.container}>
-      <h2 className={styles.title}>👀 Search results for: {query}</h2>
+      {searchText ? (
+        <div className={styles.header}>
+          <h2 className={styles.title}>👀 Search results for: {searchText}</h2>
+          <button
+            type="button"
+            className={styles.clearButton}
+            onClick={handelClear}
+            title="Clear Search"
+          >
+            <MdClear size={24} />
+          </button>
+        </div>
+      ) : (
+        <h2 className={styles.title}>👀 Recipes under 30 min </h2>
+      )}
       <ul className={styles.list}>
-        {recipes.map(({ id, thumbnail_url, name }) => (
+        {data?.map(({ id, thumbnail_url, name }) => (
           <RecipePreview
             key={id}
             id={id}

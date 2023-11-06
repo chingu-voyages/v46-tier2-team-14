@@ -28,7 +28,7 @@ function SearchModal() {
 
   const prevOpt = useMemo(() => {
     const currMatch = savedSearch.filter((item) => item.includes(inputValue));
-    return currMatch.map((item) => ({ label: item, value: item }));
+    return currMatch.map((item) => ({ label: item, value: item })).slice(0, 5);
   }, [savedSearch, inputValue]);
 
   /**
@@ -165,6 +165,7 @@ function SearchModal() {
                 option={option}
                 onHoverOption={handelOptionHover}
                 loading={isLoading}
+                onSelect={() => setIsOpen(false)}
               />
             </Dialog.Panel>
           </Transition.Child>
