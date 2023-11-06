@@ -12,11 +12,10 @@
   justify-content: center;
   flex-direction: column;
   background-color: var(--card);
-  /* padding: 1rem; */
-  width: 14%;
-  height: 100px;
+  padding: 1rem;
+  width: 20%;
   border-color: var(--border);
-  border-radius: 50px;
+  border-radius: 10px;
   border-width: 1px;
   border-style: solid;
 }
@@ -28,15 +27,9 @@
   font-size: var(--text-sm);
 }
 
-.nutriValue {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: var(--secondary);
-  text-align: center;
-  padding-top: 1rem;
-
-  color: rgb(0, 0, 0);
+.nutri h3 {
+  font-weight: 300;
+  font-size: var(--text-base);
 }
 
 @media (max-width: 962px) {
