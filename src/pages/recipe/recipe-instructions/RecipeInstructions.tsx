@@ -21,7 +21,9 @@ export default function RecipeInstructions() {
       <div className={styles.instructions}>
         <ol>
           {recipe.instructions.map((instruction) => (
-            <li key={instruction.id}>{instruction.display_text}</li>
+            <li key={instruction.id}>
+              <div className={styles.text}>{instruction.display_text}</div>
+            </li>
           ))}
         </ol>
       </div>
