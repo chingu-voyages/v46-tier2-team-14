@@ -13,7 +13,7 @@
 .nutritions {
   display: flex;
   gap: 10px;
-  overflow-y: auto;
+  overflow-x: auto;
   padding-bottom: 10px;
   margin-bottom: -10px;
 }

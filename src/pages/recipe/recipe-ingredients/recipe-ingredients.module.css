@@ -128,6 +128,24 @@
   .sections {
     position: sticky;
     max-height: calc(100vh - 70px);
-    overflow: scroll;
+    overflow-y: auto;
+
+    /* scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--background); */
   }
+
+  /* .sections::-webkit-scrollbar {
+    --size: 3px;
+    height: var(--size);
+    width: var(--size);
+  }
+
+  .sections::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+
+  .sections::-webkit-scrollbar-thumb {
+    background-color: var(--accent);
+    border-radius: 20px;
+  } */
 }
