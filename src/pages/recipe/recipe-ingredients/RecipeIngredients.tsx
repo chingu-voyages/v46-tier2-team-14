@@ -1,5 +1,6 @@
 import { BsArrowReturnRight } from "react-icons/bs";
 import { FaCheck } from "react-icons/fa";
+import { MdOutlineLocalGroceryStore } from "react-icons/md";
 
 import { Measurement } from "../../../api/recipe.types";
 import useRecipe from "../../../hooks/useRecipe";
@@ -32,7 +33,10 @@ export default function RecipeIngredients() {
 
   return (
     <section className={styles.container}>
-      <h2 className={styles.title}>Ingredients</h2>
+      <h2>
+        <MdOutlineLocalGroceryStore aria-hidden />
+        Ingredients
+      </h2>
       <div className={styles.sections}>
         {sections.map((section) => (
           <div key={section.name} className={styles.section}>

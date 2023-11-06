@@ -1,3 +1,5 @@
+import { PiBookOpenText } from "react-icons/pi";
+
 import useRecipe from "../../../hooks/useRecipe";
 import styles from "./recipe-instruction.module.css";
 
@@ -12,7 +14,10 @@ export default function RecipeInstructions() {
   }
   return (
     <section className={styles.container}>
-      <h2>Instructions</h2>
+      <h2>
+        <PiBookOpenText aria-hidden />
+        Instructions
+      </h2>
       <div className={styles.instructions}>
         <ol>
           {recipe.instructions.map((instruction) => (

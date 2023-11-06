@@ -1,3 +1,5 @@
+import { IoNutritionOutline } from "react-icons/io5";
+
 import useRecipe from "../../../hooks/useRecipe";
 import styles from "./nutrition.module.css";
 
@@ -8,7 +10,10 @@ export default function Nutrition() {
   }
   return (
     <section className={styles.container}>
-      <h2>Nutrition per serving</h2>
+      <h2>
+        <IoNutritionOutline aria-hidden />
+        Nutrition per serving
+      </h2>
       <div className={styles.nutritions}>
         <div className={styles.nutri}>
           <span>Calories</span>
