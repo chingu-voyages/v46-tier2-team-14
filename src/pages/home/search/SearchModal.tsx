@@ -55,7 +55,7 @@ function SearchModal() {
     setCurrHoveredOption(undefined);
   };
 
-  const onSearch = (newSearch: string) => {
+  const onSearch = (newSearch: string, doNavigate = true) => {
     setSavedSearch((prev) => {
       const updatedSearch = [...prev, newSearch];
       const uniqueSearch = [...new Set(updatedSearch)];
@@ -63,7 +63,7 @@ function SearchModal() {
     });
     setIsOpen(false);
     setInputValue("");
-    navigate(`/${newSearch}`);
+    if (doNavigate) navigate(`/${newSearch}`);
   };
 
   const handelFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -103,6 +103,10 @@ function SearchModal() {
 
   const handelOptionHover = (newOpt: OptionI | undefined) => {
     setCurrHoveredOption(newOpt);
+  };
+
+  const handelOptionSelect = (selectedOption: OptionI) => {
+    onSearch(selectedOption.label, false);
   };
 
   return (
@@ -165,7 +169,7 @@ function SearchModal() {
                 option={option}
                 onHoverOption={handelOptionHover}
                 loading={isLoading}
-                onSelect={() => setIsOpen(false)}
+                onSelect={handelOptionSelect}
               />
             </Dialog.Panel>
           </Transition.Child>
