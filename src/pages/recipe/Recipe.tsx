@@ -1,3 +1,5 @@
+import Skeleton from "../../components/skeleton/Skeleton";
+import useImageLoaded from "../../hooks/useImageLoaded";
 import useMedia from "../../hooks/useMedia";
 import useRecipe from "../../hooks/useRecipe";
 import MetaBadges from "./meta-badges/MetaBadges";
@@ -11,16 +13,21 @@ import TimeInfo from "./time-info/TimeInfo";
 export default function Recipe() {
   const isBigScreen = useMedia("(min-width: 1024px)");
   const recipe = useRecipe();
+  const isImageLoaded = useImageLoaded(recipe.thumbnail_url);
 
   if (isBigScreen)
     return (
       <main className={styles.recipe}>
         <div className={styles.left}>
-          <img
-            src={recipe.thumbnail_url}
-            alt={recipe.name}
-            className={styles.image}
-          />
+          {isImageLoaded ? (
+            <img
+              src={recipe.thumbnail_url}
+              alt={recipe.name}
+              className={styles.image}
+            />
+          ) : (
+            <Skeleton width="401px" height="401px" />
+          )}
           <RecipeIngredients />
         </div>
         <div className={styles.right}>

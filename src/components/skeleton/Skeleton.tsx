@@ -20,7 +20,7 @@ export default function Skeleton({ width, height, type }: SkeletonI) {
 }
 
 Skeleton.defaultProps = {
-  width: 10,
-  height: 10,
+  width: "100%",
+  height: "100%",
   type: "rounded",
 };
