@@ -1,0 +1,18 @@
+.button {
+  /* add sizes to button if more variants are needed */
+  font-size: var(--text-base);
+  /* add button types prop if more background colors are needed */
+  background-color: var(--primary);
+
+  padding: 0.75em 1.25em;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius);
+  color: white;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
