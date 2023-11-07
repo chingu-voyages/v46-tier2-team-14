@@ -113,7 +113,7 @@ function OptionList({
           <li key={item.label + item.value}>
             <Link
               onClick={() => onSelect(item)}
-              to={`${item.label}`}
+              to={`/${item.label}`}
               className={`${styles.listItem} ${
                 ind === currInd - prevOpt.length
                   ? styles["listItem--hover"]

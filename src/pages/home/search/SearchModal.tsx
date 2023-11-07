@@ -90,7 +90,7 @@ function SearchModal() {
     };
   });
 
-  const option = useMemo(
+  const option: OptionI[] = useMemo(
     () =>
       !data || inputValue === ""
         ? []
