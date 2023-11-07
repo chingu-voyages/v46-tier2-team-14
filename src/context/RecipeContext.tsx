@@ -2,6 +2,7 @@ import { createContext } from "react";
 import { useParams } from "react-router-dom";
 
 import { Recipe } from "../api/recipe.types";
+import { GoHome, TryAgain } from "../components/error/Error";
 import useRecipeQuery from "../hooks/useRecipeQuery";
 import RecipeSkeleton from "../pages/recipe/recipe-skeleton/RecipeSkeleton";
 // import recipeJson from "../data/recipe.json";
@@ -15,11 +16,12 @@ export default function RecipeProvider({ children }: Props) {
   const { recipeId } = useParams();
   if (!recipeId) throw Error("recipeId required");
 
-  const { isLoading, data, isError } = useRecipeQuery(recipeId);
+  const { isLoading, data, isError, refetch } = useRecipeQuery(recipeId);
 
-  if (isLoading) return <RecipeSkeleton />; // todo: skeleton
-  if (isError) return <p>something went wrong</p>; // todo: better error
-  if (!data) return <p>recipe does not exist</p>; // todo: 204 no content
+  if (isLoading) return <RecipeSkeleton />;
+  if (isError) return <TryAgain onRetry={refetch} />;
+  if (!data)
+    return <GoHome message="The recipe you are looking for does not exist" />;
 
   return (
     <RecipeContext.Provider value={data}>{children}</RecipeContext.Provider>

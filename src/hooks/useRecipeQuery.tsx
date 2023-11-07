@@ -7,7 +7,7 @@ export default function useRecipeQuery(id: string) {
   return useQuery<Recipe, Error>({
     queryKey: ["recipe", id],
     queryFn: ({ signal }) => fetchRecipe(id, { signal }),
-    retry: 3,
+    retry: 1,
   });
 }
 
