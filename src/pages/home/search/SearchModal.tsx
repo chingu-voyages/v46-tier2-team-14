@@ -1,17 +1,35 @@
 import { Dialog, Transition } from "@headlessui/react";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { BiSearch } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
+import { AutoCompleteType } from "../../../api/autoCompleteSuggestion.types";
+import OptionList, {
+  OptionI,
+} from "../../../components/option-list/OptionList";
+import useAutoComplete from "../../../hooks/useAutoComplete";
 import useLocalStorage from "../../../hooks/useLocalStorage";
 import styles from "./searchModal.module.css";
-
 // This component use headlessUi react library for modal
 function SearchModal() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [savedSearch, setSavedSearch] = useLocalStorage(
+  const { savedSearch, setSavedSearch } = useLocalStorage(
     "SWAD_SAVED_SEARCH",
     [],
   );
+  const [debounceInputValue, setDebounceInputValue] = useState("");
+  const [inputValue, setInputValue] = useState("");
+  const [currentHoveredOpt, setCurrHoveredOption] = useState<
+    OptionI | undefined
+  >(undefined);
+  const navigate = useNavigate();
+
+  const { isLoading, data } = useAutoComplete(debounceInputValue);
+
+  const prevOpt = useMemo(() => {
+    const currMatch = savedSearch.filter((item) => item.includes(inputValue));
+    return currMatch.map((item) => ({ label: item, value: item })).slice(0, 5);
+  }, [savedSearch, inputValue]);
 
   /**
    * Function to check the operating system
@@ -32,12 +50,38 @@ function SearchModal() {
     }
   };
 
-  const onSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const recentSearch = [...savedSearch];
-    // currently it is saving each word is typed, need to handle with debounce
-    recentSearch.push(event.target.value);
-    setSavedSearch(recentSearch);
+  const onInputValueChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(event.target.value);
+    setCurrHoveredOption(undefined);
   };
+
+  const onSearch = (newSearch: string, doNavigate = true) => {
+    setSavedSearch((prev) => {
+      const updatedSearch = [...prev, newSearch];
+      const uniqueSearch = [...new Set(updatedSearch)];
+      return uniqueSearch;
+    });
+    setIsOpen(false);
+    setInputValue("");
+    if (doNavigate) navigate(`/${newSearch}`);
+  };
+
+  const handelFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (currentHoveredOpt) onSearch(currentHoveredOpt.label);
+    else onSearch(inputValue);
+  };
+
+  useEffect(() => {
+    let t: number | undefined;
+    if (inputValue) {
+      t = setTimeout(() => setDebounceInputValue(inputValue), 200);
+    }
+    return () => {
+      clearTimeout(t);
+    };
+  }, [inputValue]);
+
   useEffect(() => {
     window.addEventListener("keydown", onKeyDown);
 
@@ -45,6 +89,25 @@ function SearchModal() {
       window.removeEventListener("keydown", onKeyDown);
     };
   });
+
+  const option = useMemo(
+    () =>
+      !data || inputValue === ""
+        ? []
+        : data.map((item: AutoCompleteType) => ({
+            label: item.display,
+            value: item.display,
+          })),
+    [data, inputValue],
+  );
+
+  const handelOptionHover = (newOpt: OptionI | undefined) => {
+    setCurrHoveredOption(newOpt);
+  };
+
+  const handelOptionSelect = (selectedOption: OptionI) => {
+    onSearch(selectedOption.label, false);
+  };
 
   return (
     <>
@@ -86,13 +149,14 @@ function SearchModal() {
             leaveTo={`${styles.opacity_0} ${styles.scale_95}`}
           >
             <Dialog.Panel className={styles.dialog_panel}>
-              <form className={styles.form}>
+              <form onSubmit={handelFormSubmit} className={styles.form}>
                 <BiSearch size={50} className={styles.icon} aria-hidden />
                 <input
                   type="text"
                   placeholder="Search..."
                   className={styles.form_input}
-                  onChange={onSearch} // callback function for taking input and making api call
+                  value={inputValue}
+                  onChange={onInputValueChange} // callback function for taking input and making api call
                 />
                 <div className={styles.form_button_container}>
                   <button type="button" className={styles.form_esc_button}>
@@ -100,6 +164,13 @@ function SearchModal() {
                   </button>
                 </div>
               </form>
+              <OptionList
+                prevOpt={prevOpt}
+                option={option}
+                onHoverOption={handelOptionHover}
+                loading={isLoading}
+                onSelect={handelOptionSelect}
+              />
             </Dialog.Panel>
           </Transition.Child>
         </Dialog>

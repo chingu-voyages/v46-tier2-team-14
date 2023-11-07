@@ -14,3 +14,22 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.25em;
 }
+
+.header {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.clearButton {
+  background: transparent;
+  border: none;
+  display: flex;
+  cursor: pointer;
+  border-radius: var(--radius);
+}
+
+.clearButton:hover {
+  background: var(--secondary);
+  color: var(--accent);
+}
