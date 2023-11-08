@@ -21,7 +21,7 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 1.25em;
   list-style: none;
   counter-reset: number;
 }
@@ -44,7 +44,7 @@
 
 .text {
   margin-left: 2rem;
-  margin-top: -30px;
+  margin-top: calc(-1 * var(--size));
   text-align: justify;
   padding-left: 1rem;
   min-height: var(--size);
