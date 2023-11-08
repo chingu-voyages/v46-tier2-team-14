@@ -15,6 +15,7 @@
 }
 
 .instructions ol {
+  --size: 2rem;
   margin: 0;
   /* padding: 0 0 0 var(--section-padding); */
   padding: 0;
@@ -30,8 +31,8 @@
 .instructions li::before {
   content: counter(number);
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: var(--size);
+  height: var(--size);
   text-align: center;
   line-height: 30px;
   background-color: var(--secondary);
@@ -46,4 +47,7 @@
   margin-top: -30px;
   text-align: justify;
   padding-left: 1rem;
+  min-height: var(--size);
+  display: flex;
+  align-items: center;
 }
