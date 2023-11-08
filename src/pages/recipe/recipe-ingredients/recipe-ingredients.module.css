@@ -134,18 +134,26 @@
     scrollbar-color: var(--accent) var(--background); */
   }
 
-  /* .sections::-webkit-scrollbar {
-    --size: 3px;
+  .sections::-webkit-scrollbar {
+    --size: 5px;
     height: var(--size);
     width: var(--size);
+    transition: all 0.5ms ease-in-out;
   }
 
   .sections::-webkit-scrollbar-track {
-    background: var(--background);
+    background: transparent;
   }
 
   .sections::-webkit-scrollbar-thumb {
-    background-color: var(--accent);
+    background-color: transparent;
     border-radius: 20px;
-  } */
+  }
+
+  .sections:hover::-webkit-scrollbar-track {
+    background-color: var(--card);
+  }
+  .sections:hover::-webkit-scrollbar-thumb {
+    background-color: var(--accent);
+  }
 }
