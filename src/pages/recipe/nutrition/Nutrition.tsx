@@ -8,6 +8,15 @@ export default function Nutrition() {
   if (!recipe.nutrition) {
     return null;
   }
+  const values = [
+    { label: "Calories", value: recipe.nutrition.calories, units: "" },
+    { label: "Carbs", value: recipe.nutrition.carbohydrates, units: "gm" },
+    { label: "Fat", value: recipe.nutrition.fat, units: "gm" },
+    { label: "Protien", value: recipe.nutrition.protein, units: "gm" },
+    { label: "Sugar", value: recipe.nutrition.sugar, units: "gm" },
+    { label: "Fiber", value: recipe.nutrition.fiber, units: "gm" },
+  ];
+
   return (
     <section className={styles.container}>
       <h2>
@@ -15,30 +24,12 @@ export default function Nutrition() {
         Nutrition per serving
       </h2>
       <div className={styles.nutritions}>
-        <div className={styles.nutri}>
-          <span>Calories</span>
-          <h3>{recipe.nutrition.calories} </h3>
-        </div>
-        <div className={styles.nutri}>
-          <span>Carbs</span>
-          <h3>{recipe.nutrition.carbohydrates}gm</h3>
-        </div>
-        <div className={styles.nutri}>
-          <span>Fat</span>
-          <h3>{recipe.nutrition.fat}gm</h3>
-        </div>
-        <div className={styles.nutri}>
-          <span>Protein</span>
-          <h3>{recipe.nutrition.protein}gm</h3>
-        </div>
-        <div className={styles.nutri}>
-          <span>Sugar</span>
-          <h3>{recipe.nutrition.sugar}gm</h3>
-        </div>
-        <div className={styles.nutri}>
-          <span>Fiber</span>
-          <h3>{recipe.nutrition.fiber}gm</h3>
-        </div>
+        {values.map(({ label, value, units }) => (
+          <div className={styles.nutri} key={label}>
+            <span>{label}</span>
+            <h3>{value !== undefined ? `${value}${units}` : "-"}</h3>
+          </div>
+        ))}
       </div>
     </section>
   );
