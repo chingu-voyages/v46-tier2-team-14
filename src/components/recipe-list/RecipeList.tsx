@@ -2,16 +2,9 @@ import { MdClear } from "react-icons/md";
 import { useNavigate, useParams } from "react-router-dom";
 
 import useSearchRecipes from "../../hooks/useSearchRecipe";
-// import { Recipe } from "../../types/recipe.types";
 import styles from "./recipe-list.module.css";
 import RecipePreview from "./recipe-preview/RecipePreview";
 
-// type Props = {
-//   recipes: Recipe[];
-//   query: string;
-// };
-
-// export default function RecipeList({ recipes, query }: Props) {
 export default function RecipeList() {
   const { searchText } = useParams();
   const { data } = useSearchRecipes({
