@@ -43,7 +43,9 @@ export default function RecipeIngredients() {
             {section.name && (
               <div className={styles.title}>
                 <BsArrowReturnRight aria-hidden className={styles.icon} />
+                <span className={styles.line} aria-hidden />
                 <span className={styles.text}>{section.name}</span>
+                <span className={styles.line} aria-hidden />
               </div>
             )}
 
