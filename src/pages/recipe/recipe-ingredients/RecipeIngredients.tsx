@@ -59,6 +59,7 @@ export default function RecipeIngredients() {
                         type="checkbox"
                         id={component.id.toString()}
                         className={styles.checkbox}
+                        style={{ cursor: "pointer" }}
                       />
                       <FaCheck className={styles.custom} aria-hidden />
                     </div>
