@@ -10,7 +10,7 @@ export default function RecipePreview({ id, name, thumbnail_url }: Recipe) {
   const isImageLoaded = useImageLoaded(thumbnail_url);
 
   return (
-    <Link to={`recipe/${id}`} className={styles.recipe}>
+    <Link to={`/recipe/${id}`} className={styles.recipe}>
       {isImageLoaded ? (
         <img
           src={thumbnail_url}
