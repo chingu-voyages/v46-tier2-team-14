@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 
+import { Recipe } from "../api/recipe.types";
 import searchrecipes, { RecipeSearchParams } from "../api/searchRecipes";
-import { Recipe } from "../types/recipe.types";
 
 export default function useSearchRecipes({ ...props }: RecipeSearchParams) {
   return useQuery<Recipe[]>({
