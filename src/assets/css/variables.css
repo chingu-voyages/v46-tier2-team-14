@@ -58,6 +58,7 @@
   --primary: #ff8400;
   --secondary: #fff5d6;
   --accent: #cf4307;
+  --icon: #fef9ec;
 }
 :root[data-theme="dark"] {
   --text: #fef9ec;
@@ -65,4 +66,5 @@
   --primary: #ff8400;
   --secondary: #291f00;
   --accent: #f86c30;
+  --icon: #130e01;
 }
