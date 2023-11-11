@@ -57,6 +57,48 @@ Users can mark off ingredients as they gather them, facilitating an organized an
 The intuitive and user-friendly interface makes navigation smooth, allowing users to focus on discovering and exploring new recipes effortlessly.
 
 
+## Running the Project
+
+This section provides instructions on how to run the Recipe Search project on your local machine.
+
+### Prerequisites
+
+Ensure you have the following prerequisites installed on your machine:
+
+- [Node.js](https://nodejs.org/en/download/): The JavaScript runtime environment for running the project.
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git): Version control system for cloning and managing the project.
+
+### Installation
+
+1. **Clone the Repository:**
+    ```bash
+    git clone https://github.com/chingu-voyages/v46-tier2-team-14.git
+ 
+    ```
+
+2. **Install Dependencies:**
+    ```bash
+    npm install
+    ```
+
+### Quick Start
+
+Follow these steps to quickly start the Recipe Search project:
+
+1. **Run the Application:**
+    ```bash
+    npm start
+    ```
+
+2. **Access the Application:**
+   Open your web browser and go to `http://localhost:3000` to access the Recipe Search web app.
+
+
+
+
+
+
+
 
 
 
