@@ -79,7 +79,22 @@ Ensure you have the following prerequisites installed on your machine:
 2. **Install Dependencies:**
     ```bash
     npm install
+3. **API integration:**
+Configure the project to use your preferred recipe API by updating the API key in the `.env` file. Follow these steps:
+   - Obtain API Key
+
+    Visit the [Tasty API](https://www.example-tasty-api.com) website to obtain your API key.
+
+  - Set API Key in `.env`
+
+    1. Create a `.env` file in the root of your project.
+    2. Open the `.env` file and add the following line:
+
+    ```env
+    REACT_APP_TASTY_API_KEY=YOUR_API_KEY_HERE
     ```
+
+    Replace `YOUR_API_KEY_HERE` with the API key you obtained.
 
 ### Quick Start
 
