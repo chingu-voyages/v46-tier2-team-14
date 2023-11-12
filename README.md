@@ -20,7 +20,7 @@ SWAAD is a web application that fetches recipes from an API, offering users a se
 ## Overview
 
 SWAAD is a web application that  offering users a seamless and responsive platform to discover and explore a variety of dishes. The user-friendly interface provides detailed recipe information, search options.
- Built with React.js, Typescript. Recipe Explorer is your go-to source for culinary inspiration.
+ Built with React.js, Typescript. SWAAD is your go-to source for culinary inspiration.
 
  ## Features
 
@@ -29,7 +29,7 @@ SWAAD is a web application that  offering users a seamless and responsive platfo
 Users can search for recipes by entering either the recipe name or specific ingredients, providing a flexible and convenient search experience.
 
 2. **Autocomplete Feature:**
-Swad  offers autocomplete suggestions as users type, streamlining the search process and ensuring accurate results.
+ SWAAD offers autocomplete suggestions as users type, streamlining the search process and ensuring accurate results.
 
 3. **Light and Dark Mode:**
  Enjoy a personalized viewing experience with the option to switch between light and dark modes, enhancing readability and reducing eye strain.
@@ -50,7 +50,7 @@ Recipes include estimated preparation times, giving users a quick overview of th
 Users can mark off ingredients as they gather them, facilitating an organized and efficient cooking process with an interactive checklist.
 
 9. **Responsive Design:**
- The SWAD app is designed to be responsive, ensuring a seamless and enjoyable user experience across various devices, including desktops, tablets, and mobile phones.
+ The SWAAD app is designed to be responsive, ensuring a seamless and enjoyable user experience across various devices, including desktops, tablets, and mobile phones.
 
 10. **User-Friendly Interface:**
 The intuitive and user-friendly interface makes navigation smooth, allowing users to focus on discovering and exploring new recipes effortlessly.
@@ -79,10 +79,10 @@ Ensure you have the following prerequisites installed on your machine:
     ```bash
     npm install
 3. **API integration:**
-Configure the project to use your preferred recipe API by updating the API key in the `.env` file. Follow these steps:
+Configure the project to use your recipe API by updating the API key in the `.env` file. Follow these steps:
    - Obtain API Key
 
-    Visit the [Tasty API](https://www.example-tasty-api.com) website to obtain your API key.
+    Visit the [Tasty API](https://rapidapi.com/apidojo/api/tasty) website to obtain your API key.
 
   - Set API Key in `.env`
 
