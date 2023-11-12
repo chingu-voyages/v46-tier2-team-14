@@ -8,8 +8,6 @@ SWAAD is a web application that fetches recipes from an [Tasty API](https://rapi
 - [Features](#features)
 - [Usage](#usage)
   - [How to Use](#how-to-use)
-  - [Configuration](#configuration)
-  - [Examples](#examples)
 - [Screenshots](#screenshots)
 - [Running the project](#runnig-the-project)
   - [Prerequisites](#prerequisites)
@@ -51,6 +49,31 @@ The SWAAD app is designed to be responsive, ensuring a seamless and enjoyable us
 
 10. **User-Friendly Interface:**
 The intuitive and user-friendly interface makes navigation smooth, allowing users to focus on discovering and exploring new recipes effortlessly.
+
+## Usage
+
+This section provides instructions on how to use SWAAD project on your local machine.
+
+### How to Use
+
+
+- **Search for Recipes:**
+  - Enter a recipe name or specific ingredients in the search bar to find relevant recipes instantly.
+
+- **Explore by Cuisine:**
+  - Utilize the filter options to explore recipes based on different cuisines, broadening your culinary horizons.
+
+- **Toggle Light/Dark Mode:**
+  - Personalize your viewing experience by toggling between light and dark modes, enhancing readability and reducing eye strai
+
+- **Interactive Checklist for Ingredients:**
+  - When viewing a recipe, use the interactive checklist for ingredients to keep track of what you have prepared. Simply check off items as you gather them during the cooking process.
+
+- **Saved Previous Searches:**
+  - Take advantage of the saved Previous searches feature to streamline your exploration. Access your recent searches for quick reference and easy retrieval of previously discovered recipes.
+
+
+## Screenshots
 
 
 ## Running the Project
