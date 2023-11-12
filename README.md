@@ -1,7 +1,7 @@
 
-# Swad
+# SWAAD
 
-SWAD is a web application that fetches recipes from an API, offering users a seamless and responsive platform to discover and explore a variety of dishes. 
+SWAAD is a web application that fetches recipes from an API, offering users a seamless and responsive platform to discover and explore a variety of dishes. 
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@ SWAD is a web application that fetches recipes from an API, offering users a sea
 
 ## Overview
 
-SWAD is a web application that  offering users a seamless and responsive platform to discover and explore a variety of dishes. The user-friendly interface provides detailed recipe information, search options.
+SWAAD is a web application that  offering users a seamless and responsive platform to discover and explore a variety of dishes. The user-friendly interface provides detailed recipe information, search options.
  Built with React.js, Typescript. Recipe Explorer is your go-to source for culinary inspiration.
 
  ## Features
@@ -38,7 +38,6 @@ Swad  offers autocomplete suggestions as users type, streamlining the search pro
 Users can conveniently access their recent searches, saving time and enabling quick reference to previously explored recipes.
 
 5. **Detailed Recipe Information:**
-
 Each recipe page provides comprehensive details, including ingredients, nutritional value, preparation time, and step-by-step instructions.
 
 6. **Nutritional Value Display:**
@@ -59,7 +58,7 @@ The intuitive and user-friendly interface makes navigation smooth, allowing user
 
 ## Running the Project
 
-This section provides instructions on how to run the Recipe Search project on your local machine.
+These are the instructions on how to run the SWAAD on your local machine.
 
 ### Prerequisites
 
@@ -98,7 +97,7 @@ Configure the project to use your preferred recipe API by updating the API key i
 
 ### Quick Start
 
-Follow these steps to quickly start the Recipe Search project:
+Follow these steps to quickly start the project:
 
 1. **Run the Application:**
     ```bash
@@ -106,7 +105,7 @@ Follow these steps to quickly start the Recipe Search project:
     ```
 
 2. **Access the Application:**
-   Open your web browser and go to `http://localhost:3000` to access the Recipe Search web app.
+   Open your web browser and go to `http://localhost:3000` to access the SWAAD web app.
 
 
 
