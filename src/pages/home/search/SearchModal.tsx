@@ -1,8 +1,8 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { useEffect, useMemo, useState } from "react";
 import { BiSearch } from "react-icons/bi";
-import { useNavigate } from "react-router-dom";
 
+// import { useNavigate } from "react-router-dom";
 import { AutoCompleteType } from "../../../api/autoCompleteSuggestion.types";
 import OptionList, {
   OptionI,
@@ -22,7 +22,7 @@ function SearchModal() {
   const [currentHoveredOpt, setCurrHoveredOption] = useState<
     OptionI | undefined
   >(undefined);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const { isLoading, data } = useAutoComplete(debounceInputValue);
 
@@ -57,13 +57,16 @@ function SearchModal() {
 
   const onSearch = (newSearch: string, doNavigate = true) => {
     setSavedSearch((prev) => {
-      const updatedSearch = [...prev, newSearch];
-      const uniqueSearch = [...new Set(updatedSearch)];
+      const updatedSearch = [newSearch, ...prev];
+      const uniqueSearch = [...new Set(updatedSearch)].slice(0, 50);
       return uniqueSearch;
     });
     setIsOpen(false);
     setInputValue("");
-    if (doNavigate) navigate(`/${newSearch}`);
+    if (doNavigate) {
+      console.log("--------------------------------------------------");
+      // navigate(`/${newSearch}`);
+    }
   };
 
   const handelFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -90,7 +93,7 @@ function SearchModal() {
     };
   });
 
-  const option = useMemo(
+  const option: OptionI[] = useMemo(
     () =>
       !data || inputValue === ""
         ? []
