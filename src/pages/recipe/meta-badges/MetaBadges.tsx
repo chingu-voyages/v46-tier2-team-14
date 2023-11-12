@@ -1,9 +1,9 @@
 import { AiOutlineLike } from "react-icons/ai";
 import { BiBowlHot, BiLinkExternal } from "react-icons/bi";
 
-import Badge from "../../../../components/badge/Badge";
-import useMedia from "../../../../hooks/useMedia";
-import useRecipe from "../../../../hooks/useRecipe";
+import Badge from "../../../components/badge/Badge";
+import useMedia from "../../../hooks/useMedia";
+import useRecipe from "../../../hooks/useRecipe";
 import styles from "./meta-badges.module.css";
 
 export default function MetaBadges() {

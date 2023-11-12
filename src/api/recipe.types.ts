@@ -35,13 +35,13 @@ export type TotalTimeTier = {
 };
 
 export type Nutrition = {
-  updated_at: string;
-  calories: number;
-  carbohydrates: number;
-  fat: number;
-  protein: number;
-  sugar: number;
-  fiber: number;
+  updated_at?: string;
+  calories?: number;
+  carbohydrates?: number;
+  fat?: number;
+  protein?: number;
+  sugar?: number;
+  fiber?: number;
 };
 
 export type Tag = {

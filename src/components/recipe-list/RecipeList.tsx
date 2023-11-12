@@ -3,25 +3,22 @@ import { BsArrowUpCircle } from "react-icons/bs";
 import { MdClear } from "react-icons/md";
 import { useNavigate, useParams } from "react-router-dom";
 
+import { Recipe } from "../../api/recipe.types";
 import useSearchRecipes from "../../hooks/useSearchRecipe";
-import { Recipe } from "../../types/recipe.types";
+import { TryAgain } from "../error/Error";
 import styles from "./recipe-list.module.css";
 import RecipePreview from "./recipe-preview/RecipePreview";
+import RecipesSkeleton from "./recipes-skeleton/RecipesSkeleton";
 
-// type Props = {
-//   recipes: Recipe[];
-//   query: string;
-// };
-
-// export default function RecipeList({ recipes, query }: Props) {
 const SHOW_RECIPE_PER_LOAD = 20;
 const SHOW_RECIPE_ON_INITIAL_LOAD = 20;
 const BUFFER_SCROLL_HEIGHT = 151;
+
 export default function RecipeList() {
   const { searchText } = useParams();
   const [start, setStart] = useState<number>(0);
   const [moveToTop, setMoveToTop] = useState<boolean>(false);
-  const { data } = useSearchRecipes({
+  const { data, isLoading, isError, refetch } = useSearchRecipes({
     from: start,
     size: SHOW_RECIPE_ON_INITIAL_LOAD,
     q: searchText,
@@ -56,7 +53,6 @@ export default function RecipeList() {
           heroElement.scrollHeight +
           recipePreviewRef.current.scrollHeight
         : 0;
-    console.log(totalScrollHeight);
     if (position > totalScrollHeight + BUFFER_SCROLL_HEIGHT) {
       setMoveToTop(true);
     } else if (position < totalScrollHeight + BUFFER_SCROLL_HEIGHT) {
@@ -99,38 +95,45 @@ export default function RecipeList() {
       ) : (
         <h2 className={styles.title}>👀 Recipes under 30 min </h2>
       )}
-      <ul className={styles.list} ref={recipeListRef}>
-        {recipeToShow?.map(({ id, thumbnail_url, name }) => (
-          <RecipePreview
-            key={id}
-            id={id}
-            name={name}
-            thumbnail_url={thumbnail_url}
-            ref={recipePreviewRef}
-          />
-        ))}
-      </ul>
-      {recipeToShow.length > 0 && (
-        <div className={styles.moveToLoad}>
-          <button
-            type="button"
-            onClick={handleShowMoreRecipe}
-            className={styles.moveToLoadButton}
-          >
-            Load More
-          </button>
-        </div>
-      )}
-      {moveToTop && (
-        <div className={styles.moveToTop}>
-          <button
-            type="button"
-            className={styles.moveToTopButton}
-            onClick={handleScrollToTop}
-          >
-            <BsArrowUpCircle size={28} />
-          </button>
-        </div>
+      {isLoading && <RecipesSkeleton length={20} />}
+      {isError && <TryAgain onRetry={refetch} />}
+      {recipeToShow && (
+        <>
+          <ul className={styles.list} ref={recipeListRef}>
+            {recipeToShow.map(({ id, thumbnail_url, name }) => (
+              <RecipePreview
+                key={id}
+                id={id}
+                name={name}
+                thumbnail_url={thumbnail_url}
+                ref={recipePreviewRef}
+              />
+            ))}
+          </ul>
+
+          {recipeToShow.length > 0 && (
+            <div className={styles.moveToLoad}>
+              <button
+                type="button"
+                onClick={handleShowMoreRecipe}
+                className={styles.moveToLoadButton}
+              >
+                Load More
+              </button>
+            </div>
+          )}
+          {moveToTop && (
+            <div className={styles.moveToTop}>
+              <button
+                type="button"
+                className={styles.moveToTopButton}
+                onClick={handleScrollToTop}
+              >
+                <BsArrowUpCircle size={28} />
+              </button>
+            </div>
+          )}
+        </>
       )}
     </section>
   );

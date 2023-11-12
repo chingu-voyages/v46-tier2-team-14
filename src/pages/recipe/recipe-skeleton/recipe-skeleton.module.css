@@ -49,3 +49,13 @@
   align-items: center;
   gap: 0.5rem;
 }
+
+.badges,
+.nutritions {
+  display: flex;
+  gap: 1rem;
+}
+
+.wrapper {
+  aspect-ratio: 1/1;
+}

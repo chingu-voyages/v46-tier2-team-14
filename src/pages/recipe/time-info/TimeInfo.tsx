@@ -1,6 +1,6 @@
 import { FiClock } from "react-icons/fi";
 
-import useRecipe from "../../../../hooks/useRecipe";
+import useRecipe from "../../../hooks/useRecipe";
 import styles from "./time-info.module.css";
 
 function readableTime(minutes: number) {

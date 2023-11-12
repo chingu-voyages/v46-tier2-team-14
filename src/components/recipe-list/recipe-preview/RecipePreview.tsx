@@ -3,13 +3,15 @@ import { forwardRef, Ref } from "react";
 import { BsArrowUpRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
+import { Recipe } from "../../../api/recipe.types";
 import useImageLoaded from "../../../hooks/useImageLoaded";
-import { Recipe } from "../../../types/recipe.types";
 import Skeleton from "../../skeleton/Skeleton";
 import styles from "./recipe-preview.module.css";
 
+type Props = Pick<Recipe, "id" | "name" | "thumbnail_url">;
+
 const RecipePreview = forwardRef(function RecipePreview(
-  { id, name, thumbnail_url }: Recipe,
+  { id, name, thumbnail_url }: Props,
   ref,
 ) {
   const isImageLoaded = useImageLoaded(thumbnail_url);
