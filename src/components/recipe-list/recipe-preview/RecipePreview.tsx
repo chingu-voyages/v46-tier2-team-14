@@ -1,3 +1,5 @@
+/* eslint-disable prefer-arrow-callback */
+import { forwardRef, Ref } from "react";
 import { BsArrowUpRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
@@ -8,11 +10,18 @@ import styles from "./recipe-preview.module.css";
 
 type Props = Pick<Recipe, "id" | "name" | "thumbnail_url">;
 
-export default function RecipePreview({ id, name, thumbnail_url }: Props) {
+const RecipePreview = forwardRef(function RecipePreview(
+  { id, name, thumbnail_url }: Props,
+  ref,
+) {
   const isImageLoaded = useImageLoaded(thumbnail_url);
 
   return (
-    <Link to={`/recipe/${id}`} className={styles.recipe}>
+    <Link
+      to={`recipe/${id}`}
+      className={styles.recipe}
+      ref={ref as unknown as Ref<HTMLAnchorElement>}
+    >
       {isImageLoaded ? (
         <img
           src={thumbnail_url}
@@ -33,4 +42,6 @@ export default function RecipePreview({ id, name, thumbnail_url }: Props) {
       </div>
     </Link>
   );
-}
+});
+
+export default RecipePreview;

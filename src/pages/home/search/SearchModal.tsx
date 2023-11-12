@@ -14,7 +14,7 @@ import styles from "./searchModal.module.css";
 function SearchModal() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { savedSearch, setSavedSearch } = useLocalStorage(
-    "SWAD_SAVED_SEARCH",
+    "SWAAD_SAVED_SEARCH",
     [],
   );
   const [debounceInputValue, setDebounceInputValue] = useState("");
