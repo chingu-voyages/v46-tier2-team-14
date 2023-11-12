@@ -111,7 +111,7 @@ export default function RecipeList() {
             ))}
           </ul>
 
-          {recipeToShow.length > 0 && (
+          {recipeToShow.length > 0 ? (
             <div className={styles.moveToLoad}>
               <button
                 type="button"
@@ -121,6 +121,8 @@ export default function RecipeList() {
                 Load More
               </button>
             </div>
+          ) : (
+            <h2 className={styles.noRecipeFound}>No Recipe Found...... </h2>
           )}
           {moveToTop && (
             <div className={styles.moveToTop}>
