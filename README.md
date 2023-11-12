@@ -74,8 +74,26 @@ This section provides instructions on how to use SWAAD project on your local mac
 
 
 ## Screenshots
+1- **Landing page**
 
+![Screenshot (859)](https://github.com/chingu-voyages/v46-tier2-team-14/assets/72970648/418648dd-5d1b-4a44-a7f5-6a2a3f406821)
 
+2- **Recipe Page**
+
+![Screenshot (862)](https://github.com/chingu-voyages/v46-tier2-team-14/assets/72970648/9318e465-63db-4886-9c4b-d601d0967a16)
+![Screenshot (863)](https://github.com/chingu-voyages/v46-tier2-team-14/assets/72970648/00bc17a5-6819-4578-bb61-e4cd2f860c6c)
+![Screenshot (865)](https://github.com/chingu-voyages/v46-tier2-team-14/assets/72970648/868b96df-fa01-4881-8e2c-9d475818d373)
+3- **Search Results**
+
+![Screenshot (864)](https://github.com/chingu-voyages/v46-tier2-team-14/assets/72970648/8b552526-100d-48a7-b8bd-121279d4c131)
+
+4- **Search Suggestions**
+
+![Screenshot (861)](https://github.com/chingu-voyages/v46-tier2-team-14/assets/72970648/10cfbff2-3f68-4a71-9661-114898f614f5)
+
+5- **Previous Searches**
+
+![Screenshot (860)](https://github.com/chingu-voyages/v46-tier2-team-14/assets/72970648/6f0c3017-c9a4-45bd-825b-e4ec2c4c5531)
 ## Running the Project
 These are the instructions on how to run the SWAAD on your local machine.
 
