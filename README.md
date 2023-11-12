@@ -87,11 +87,11 @@ Configure the project to use your preferred recipe API by updating the API key i
 
   - Set API Key in `.env`
 
-    1. Create a `.env` file in the root of your project.
-    2. Open the `.env` file and add the following line:
+    1. Copy `.env.template` contents into a `.env` file in the root of your project.
+    2. Open the `.env` file and edit the following line:
 
     ```env
-    REACT_APP_TASTY_API_KEY=YOUR_API_KEY_HERE
+    VITE_API_KEY=YOUR_API_KEY_HERE
     ```
 
     Replace `YOUR_API_KEY_HERE` with the API key you obtained.
@@ -102,7 +102,7 @@ Follow these steps to quickly start the Recipe Search project:
 
 1. **Run the Application:**
     ```bash
-    npm start
+    npm run dev
     ```
 
 2. **Access the Application:**
