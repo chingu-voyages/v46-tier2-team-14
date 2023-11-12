@@ -70,3 +70,8 @@
   border-radius: var(--radius);
   opacity: 0.7;
 }
+
+.noRecipeFound {
+  text-align: center;
+  color: var(--text);
+}
