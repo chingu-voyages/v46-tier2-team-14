@@ -1,7 +1,7 @@
 
 # SWAAD
 
-SWAAD is a web application that fetches recipes from an API, offering users a seamless and responsive platform to discover and explore a variety of dishes. 
+SWAAD is a web application that fetches recipes from an [Tasty API](https://rapidapi.com/apidojo/api/tasty), offering users a seamless and responsive platform to discover and explore a variety of dishes. 
 
 ## Table of Contents
 
