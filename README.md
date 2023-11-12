@@ -1,4 +1,3 @@
-
 # SWAAD
 
 SWAAD is a web application that fetches recipes from an [Tasty API](https://rapidapi.com/apidojo/api/tasty), offering users a seamless and responsive platform to discover and explore a variety of dishes. 
@@ -18,21 +17,19 @@ SWAAD is a web application that fetches recipes from an [Tasty API](https://rapi
   - [Quick Start](#quick-start)
 
 ## Overview
-
 SWAAD is a web application that  offering users a seamless and responsive platform to discover and explore a variety of dishes. The user-friendly interface provides detailed recipe information, search options.
  Built with React.js, Typescript. SWAAD is your go-to source for culinary inspiration.
 
  ## Features
 
 1. **Search by Name or Ingredients:**
-  
 Users can search for recipes by entering either the recipe name or specific ingredients, providing a flexible and convenient search experience.
 
 2. **Autocomplete Feature:**
- SWAAD offers autocomplete suggestions as users type, streamlining the search process and ensuring accurate results.
+SWAAD offers autocomplete suggestions as users type, streamlining the search process and ensuring accurate results.
 
 3. **Light and Dark Mode:**
- Enjoy a personalized viewing experience with the option to switch between light and dark modes, enhancing readability and reducing eye strain.
+Enjoy a personalized viewing experience with the option to switch between light and dark modes, enhancing readability and reducing eye strain.
 
 4. **Saved Recent Searches:**
 Users can conveniently access their recent searches, saving time and enabling quick reference to previously explored recipes.
@@ -41,7 +38,7 @@ Users can conveniently access their recent searches, saving time and enabling qu
 Each recipe page provides comprehensive details, including ingredients, nutritional value, preparation time, and step-by-step instructions.
 
 6. **Nutritional Value Display:**
- The nutritional information for each recipe is prominently displayed, allowing users to make informed choices based on their dietary preferences or requirements.
+The nutritional information for each recipe is prominently displayed, allowing users to make informed choices based on their dietary preferences or requirements.
 
 7. **Preparation Time Indication:**
 Recipes include estimated preparation times, giving users a quick overview of the time commitment required for each dish.
@@ -50,14 +47,13 @@ Recipes include estimated preparation times, giving users a quick overview of th
 Users can mark off ingredients as they gather them, facilitating an organized and efficient cooking process with an interactive checklist.
 
 9. **Responsive Design:**
- The SWAAD app is designed to be responsive, ensuring a seamless and enjoyable user experience across various devices, including desktops, tablets, and mobile phones.
+The SWAAD app is designed to be responsive, ensuring a seamless and enjoyable user experience across various devices, including desktops, tablets, and mobile phones.
 
 10. **User-Friendly Interface:**
 The intuitive and user-friendly interface makes navigation smooth, allowing users to focus on discovering and exploring new recipes effortlessly.
 
 
 ## Running the Project
-
 These are the instructions on how to run the SWAAD on your local machine.
 
 ### Prerequisites
@@ -96,9 +92,7 @@ Configure the project to use your recipe API by updating the API key in the `.en
     Replace `YOUR_API_KEY_HERE` with the API key you obtained.
 
 ### Quick Start
-
 Follow these steps to quickly start the project:
-
 1. **Run the Application:**
     ```bash
     npm run dev
@@ -106,21 +100,3 @@ Follow these steps to quickly start the project:
 
 2. **Access the Application:**
    Open your web browser and go to `http://localhost:3000` to access the SWAAD web app.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

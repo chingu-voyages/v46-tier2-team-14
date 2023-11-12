@@ -112,6 +112,7 @@
   letter-spacing: 0.05em;
   border-radius: 0.375rem;
   font-size: var(--text-base);
+  color: var(--text);
 }
 
 .icon {

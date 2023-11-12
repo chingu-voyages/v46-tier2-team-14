@@ -1,7 +1,7 @@
 .badge {
   font-size: var(--text-sm);
   border: 1px solid var(--border);
-  padding: 0.25em 0.5em;
+  padding: 0.25em 0.75em;
   border-radius: 9999px;
   font-weight: 600;
   display: inline-flex;

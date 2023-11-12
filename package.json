@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && npm install && vite build",
     "lint:code": "eslint --ignore-path .gitignore .",
     "check:types": "tsc --noEmit",
     "prettier": "prettier  --ignore-path .gitignore --check .",
