@@ -16,7 +16,7 @@ import RecipePreview from "./recipe-preview/RecipePreview";
 // export default function RecipeList({ recipes, query }: Props) {
 const SHOW_RECIPE_PER_LOAD = 20;
 const SHOW_RECIPE_ON_INITIAL_LOAD = 20;
-const BUFFER_SCROLL_HEIGHT = 150;
+const BUFFER_SCROLL_HEIGHT = 151;
 export default function RecipeList() {
   const { searchText } = useParams();
   const [start, setStart] = useState<number>(0);
@@ -56,6 +56,7 @@ export default function RecipeList() {
           heroElement.scrollHeight +
           recipePreviewRef.current.scrollHeight
         : 0;
+    console.log(totalScrollHeight);
     if (position > totalScrollHeight + BUFFER_SCROLL_HEIGHT) {
       setMoveToTop(true);
     } else if (position < totalScrollHeight + BUFFER_SCROLL_HEIGHT) {

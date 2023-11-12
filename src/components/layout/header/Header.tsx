@@ -6,7 +6,7 @@ import styles from "./header.module.css";
 
 export default function Header() {
   return (
-    <header className={styles.header}>
+    <header className={styles.header} id="header">
       <Link to="/" className={styles.branding}>
         <h1>
           <span className="aria-hidden">📖</span> swad.
