@@ -9,7 +9,7 @@ export default function Header() {
     <header className={styles.header} id="header">
       <Link to="/" className={styles.branding}>
         <h1>
-          <span className="aria-hidden">📖</span> swad.
+          <span className="aria-hidden">📖</span> swaad.
         </h1>
       </Link>
       <div className={styles.icons}>
