@@ -1,8 +1,8 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { useEffect, useMemo, useState } from "react";
 import { BiSearch } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
-// import { useNavigate } from "react-router-dom";
 import { AutoCompleteType } from "../../../api/autoCompleteSuggestion.types";
 import OptionList, {
   OptionI,
@@ -22,7 +22,7 @@ function SearchModal() {
   const [currentHoveredOpt, setCurrHoveredOption] = useState<
     OptionI | undefined
   >(undefined);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const { isLoading, data } = useAutoComplete(debounceInputValue);
 
@@ -64,8 +64,7 @@ function SearchModal() {
     setIsOpen(false);
     setInputValue("");
     if (doNavigate) {
-      console.log("--------------------------------------------------");
-      // navigate(`/${newSearch}`);
+      navigate(`/${newSearch}`);
     }
   };
 
@@ -93,16 +92,19 @@ function SearchModal() {
     };
   });
 
-  const option: OptionI[] = useMemo(
-    () =>
+  const option: OptionI[] = useMemo(() => {
+    const opt: OptionI[] =
       !data || inputValue === ""
         ? []
         : data.map((item: AutoCompleteType) => ({
             label: item.display,
             value: item.display,
-          })),
-    [data, inputValue],
-  );
+          }));
+
+    return !opt.length && inputValue !== ""
+      ? [{ label: inputValue, value: inputValue }]
+      : opt;
+  }, [data, inputValue]);
 
   const handelOptionHover = (newOpt: OptionI | undefined) => {
     setCurrHoveredOption(newOpt);

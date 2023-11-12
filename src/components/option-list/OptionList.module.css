@@ -43,9 +43,3 @@
 .listItem--skeleton:nth-child(2) {
   flex-grow: 1;
 }
-
-.nothingFound {
-  color: var(--text);
-  justify-content: center;
-  cursor: auto;
-}
