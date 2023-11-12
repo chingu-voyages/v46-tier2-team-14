@@ -1,3 +1,9 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+}
+
 .instructions {
   display: flex;
   align-items: center;
@@ -5,5 +11,43 @@
   flex-direction: row;
   background-color: var(--card);
   border-radius: 10px;
-  margin-top: 1rem;
+  padding: var(--section-padding);
+}
+
+.instructions ol {
+  --size: 2rem;
+  margin: 0;
+  /* padding: 0 0 0 var(--section-padding); */
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+  list-style: none;
+  counter-reset: number;
+}
+.instructions li {
+  counter-increment: number;
+}
+.instructions li::before {
+  content: counter(number);
+  display: inline-block;
+  width: var(--size);
+  height: var(--size);
+  text-align: center;
+  line-height: 30px;
+  background-color: var(--secondary);
+  margin-right: 5px;
+  border-radius: 100%;
+  border: 0.5px solid var(--border);
+  font-weight: 600;
+}
+
+.text {
+  margin-left: 2rem;
+  margin-top: calc(-1 * var(--size));
+  text-align: justify;
+  padding-left: 1rem;
+  min-height: var(--size);
+  display: flex;
+  align-items: center;
 }

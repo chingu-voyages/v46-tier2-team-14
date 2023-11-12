@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+}
+
+.tags {
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  background-color: var(--card);
+  border-radius: var(--radius);
+  padding: var(--section-padding);
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  cursor: pointer;
+}
+.button:hover {
+  color: var(--primary);
+}

@@ -2,12 +2,14 @@ import { MdClear } from "react-icons/md";
 import { useNavigate, useParams } from "react-router-dom";
 
 import useSearchRecipes from "../../hooks/useSearchRecipe";
+import { TryAgain } from "../error/Error";
 import styles from "./recipe-list.module.css";
 import RecipePreview from "./recipe-preview/RecipePreview";
+import RecipesSkeleton from "./recipes-skeleton/RecipesSkeleton";
 
 export default function RecipeList() {
   const { searchText } = useParams();
-  const { data } = useSearchRecipes({
+  const { data, isLoading, isError, refetch } = useSearchRecipes({
     from: 0,
     size: 20,
     q: searchText,
@@ -36,16 +38,20 @@ export default function RecipeList() {
       ) : (
         <h2 className={styles.title}>👀 Recipes under 30 min </h2>
       )}
-      <ul className={styles.list}>
-        {data?.map(({ id, thumbnail_url, name }) => (
-          <RecipePreview
-            key={id}
-            id={id}
-            name={name}
-            thumbnail_url={thumbnail_url}
-          />
-        ))}
-      </ul>
+      {isLoading && <RecipesSkeleton length={20} />}
+      {isError && <TryAgain onRetry={refetch} />}
+      {data && (
+        <ul className={styles.list}>
+          {data.map(({ id, thumbnail_url, name }) => (
+            <RecipePreview
+              key={id}
+              id={id}
+              name={name}
+              thumbnail_url={thumbnail_url}
+            />
+          ))}
+        </ul>
+      )}
     </section>
   );
 }
