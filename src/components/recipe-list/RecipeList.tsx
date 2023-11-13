@@ -25,6 +25,7 @@ export default function RecipeList() {
     tags: searchText ? undefined : "under_30_minutes",
   });
   const [recipeToShow, setRecipeToShow] = useState<Recipe[] | []>([]);
+  const [loadMore, setLoadMore] = useState<boolean>(false);
   const navigate = useNavigate();
   const recipeListRef = useRef<HTMLUListElement>(null);
   const recipePreviewRef = useRef<HTMLUListElement>(null);
@@ -35,6 +36,7 @@ export default function RecipeList() {
 
   const handleShowMoreRecipe = () => {
     setStart(start + SHOW_RECIPE_PER_LOAD);
+    setLoadMore(true);
   };
 
   const handleVisibleButton = () => {
@@ -55,8 +57,19 @@ export default function RecipeList() {
   };
 
   useEffect(() => {
+    if (loadMore) {
+      setLoadMore(false);
+    }
+    setStart(0);
+  }, [searchText]);
+
+  useEffect(() => {
     if (data) {
-      setRecipeToShow((prev) => [...prev, ...data]);
+      if (loadMore) {
+        setRecipeToShow((prev) => [...prev, ...data]);
+      } else {
+        setRecipeToShow(data);
+      }
     }
   }, [data]);
 
