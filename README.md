@@ -132,6 +132,16 @@ Configure the project to use your recipe API by updating the API key in the `.en
 
     Replace `YOUR_API_KEY_HERE` with the API key you obtained.
 
+### Dependencies
+
+- [@headlessui/react](https://www.npmjs.com/package/@headlessui/react): ^1.7.17
+- [@tanstack/react-query](https://www.npmjs.com/package/@tanstack/react-query): ^5.0.0
+- [axios](https://www.npmjs.com/package/axios): ^1.5.1
+- [react](https://www.npmjs.com/package/react): ^18.2.0
+- [react-dom](https://www.npmjs.com/package/react-dom): ^18.2.0
+- [react-icons](https://www.npmjs.com/package/react-icons): ^4.11.0
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom): ^6.16.0
+
 ### Quick Start
 Follow these steps to quickly start the project:
 1. **Run the Application:**
