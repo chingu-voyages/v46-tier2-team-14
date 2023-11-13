@@ -8,8 +8,6 @@ SWAAD is a web application that fetches recipes from an [Tasty API](https://rapi
 - [Features](#features)
 - [Usage](#usage)
   - [How to Use](#how-to-use)
-  - [Configuration](#configuration)
-  - [Examples](#examples)
 - [Screenshots](#screenshots)
 - [Running the project](#runnig-the-project)
   - [Prerequisites](#prerequisites)
@@ -52,6 +50,49 @@ The SWAAD app is designed to be responsive, ensuring a seamless and enjoyable us
 10. **User-Friendly Interface:**
 The intuitive and user-friendly interface makes navigation smooth, allowing users to focus on discovering and exploring new recipes effortlessly.
 
+## Usage
+This section provides instructions on how to use SWAAD project on your local machine.
+
+### How to Use
+
+
+- **Search for Recipes:**
+  - Enter a recipe name or specific ingredients in the search bar to find relevant recipes instantly.
+
+- **Explore by Cuisine:**
+  - Utilize the filter options to explore recipes based on different cuisines, broadening your culinary horizons.
+
+- **Toggle Light/Dark Mode:**
+  - Personalize your viewing experience by toggling between light and dark modes, enhancing readability and reducing eye strai
+
+- **Interactive Checklist for Ingredients:**
+  - When viewing a recipe, use the interactive checklist for ingredients to keep track of what you have prepared. Simply check off items as you gather them during the cooking process.
+
+- **Saved Previous Searches:**
+  - Take advantage of the saved Previous searches feature to streamline your exploration. Access your recent searches for quick reference and easy retrieval of previously discovered recipes.
+
+
+## Screenshots
+1- **Landing page**
+
+![Screenshot (859)](https://github.com/chingu-voyages/v46-tier2-team-14/assets/72970648/418648dd-5d1b-4a44-a7f5-6a2a3f406821)
+
+2- **Recipe Page**
+
+![Screenshot (862)](https://github.com/chingu-voyages/v46-tier2-team-14/assets/72970648/9318e465-63db-4886-9c4b-d601d0967a16)
+![Screenshot (863)](https://github.com/chingu-voyages/v46-tier2-team-14/assets/72970648/00bc17a5-6819-4578-bb61-e4cd2f860c6c)
+![Screenshot (865)](https://github.com/chingu-voyages/v46-tier2-team-14/assets/72970648/868b96df-fa01-4881-8e2c-9d475818d373)
+3- **Search Results**
+
+![Screenshot (864)](https://github.com/chingu-voyages/v46-tier2-team-14/assets/72970648/8b552526-100d-48a7-b8bd-121279d4c131)
+
+4- **Search Suggestions**
+
+![Screenshot (861)](https://github.com/chingu-voyages/v46-tier2-team-14/assets/72970648/10cfbff2-3f68-4a71-9661-114898f614f5)
+
+5- **Previous Searches**
+
+![Screenshot (860)](https://github.com/chingu-voyages/v46-tier2-team-14/assets/72970648/6f0c3017-c9a4-45bd-825b-e4ec2c4c5531)
 
 ## Running the Project
 These are the instructions on how to run the SWAAD on your local machine.
