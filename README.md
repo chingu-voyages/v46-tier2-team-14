@@ -51,7 +51,6 @@ The SWAAD app is designed to be responsive, ensuring a seamless and enjoyable us
 The intuitive and user-friendly interface makes navigation smooth, allowing users to focus on discovering and exploring new recipes effortlessly.
 
 ## Usage
-
 This section provides instructions on how to use SWAAD project on your local machine.
 
 ### How to Use
@@ -94,6 +93,7 @@ This section provides instructions on how to use SWAAD project on your local mac
 5- **Previous Searches**
 
 ![Screenshot (860)](https://github.com/chingu-voyages/v46-tier2-team-14/assets/72970648/6f0c3017-c9a4-45bd-825b-e4ec2c4c5531)
+
 ## Running the Project
 These are the instructions on how to run the SWAAD on your local machine.
 

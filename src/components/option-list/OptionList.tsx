@@ -94,6 +94,24 @@ function OptionList({
           </Link>
         </li>
       ))}
+
+      {option.map((item, ind) => (
+        <li key={item.label + item.value}>
+          <Link
+            onClick={() => onSelect(item)}
+            to={`/${item.label}`}
+            className={`${styles.listItem} ${
+              ind === currInd - prevOpt.length ? styles["listItem--hover"] : ""
+            }`}
+            type="button"
+          >
+            <BiSearch size={24} />
+            <span>{item.label}</span>
+            <BsArrowUpRight size={24} />
+          </Link>
+        </li>
+      ))}
+
       {loading &&
         Array(5)
           .fill(0)
@@ -107,32 +125,6 @@ function OptionList({
               <Skeleton type="rectangle" width={1.5} height={1.5} />
             </li>
           ))}
-
-      {!loading &&
-        option.map((item, ind) => (
-          <li key={item.label + item.value}>
-            <Link
-              onClick={() => onSelect(item)}
-              to={`/${item.label}`}
-              className={`${styles.listItem} ${
-                ind === currInd - prevOpt.length
-                  ? styles["listItem--hover"]
-                  : ""
-              }`}
-              type="button"
-            >
-              <BiSearch size={24} />
-              <span>{item.label}</span>
-              <BsArrowUpRight size={24} />
-            </Link>
-          </li>
-        ))}
-
-      {!loading && !prevOpt.length && !option.length && (
-        <li className={`${styles.listItem} ${styles.nothingFound}`}>
-          Nothing Found
-        </li>
-      )}
     </ul>
   );
 }
