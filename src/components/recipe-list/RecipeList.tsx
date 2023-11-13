@@ -33,13 +33,7 @@ export default function RecipeList() {
     navigate("/");
   };
 
-  const onLoadMore = () => {
-    const allRecipe = data && recipeToShow ? [...recipeToShow, ...data] : [];
-    setRecipeToShow(allRecipe);
-  };
   const handleShowMoreRecipe = () => {
-    onLoadMore();
-    setMoveToTop(true);
     setStart(start + SHOW_RECIPE_PER_LOAD);
   };
 
@@ -59,9 +53,10 @@ export default function RecipeList() {
       setMoveToTop(false);
     }
   };
+
   useEffect(() => {
     if (data) {
-      setRecipeToShow(data);
+      setRecipeToShow((prev) => [...prev, ...data]);
     }
   }, [data]);
 
@@ -95,47 +90,47 @@ export default function RecipeList() {
       ) : (
         <h2 className={styles.title}>👀 Recipes under 30 min </h2>
       )}
-      {isLoading && <RecipesSkeleton length={20} />}
-      {isError && <TryAgain onRetry={refetch} />}
-      {recipeToShow && (
-        <>
-          <ul className={styles.list} ref={recipeListRef}>
-            {recipeToShow.map(({ id, thumbnail_url, name }) => (
-              <RecipePreview
-                key={id}
-                id={id}
-                name={name}
-                thumbnail_url={thumbnail_url}
-                ref={recipePreviewRef}
-              />
-            ))}
-          </ul>
 
-          {recipeToShow.length > 0 ? (
-            <div className={styles.moveToLoad}>
-              <button
-                type="button"
-                onClick={handleShowMoreRecipe}
-                className={styles.moveToLoadButton}
-              >
-                Load More
-              </button>
-            </div>
-          ) : (
-            <h2 className={styles.noRecipeFound}>No Recipe Found...... </h2>
-          )}
-          {moveToTop && (
-            <div className={styles.moveToTop}>
-              <button
-                type="button"
-                className={styles.moveToTopButton}
-                onClick={handleScrollToTop}
-              >
-                <BsArrowUpCircle size={28} />
-              </button>
-            </div>
-          )}
-        </>
+      {isError && <TryAgain onRetry={refetch} />}
+
+      <ul className={styles.list} ref={recipeListRef}>
+        {recipeToShow.map(({ id, thumbnail_url, name }) => (
+          <RecipePreview
+            key={id}
+            id={id}
+            name={name}
+            thumbnail_url={thumbnail_url}
+            ref={recipePreviewRef}
+          />
+        ))}
+        {isLoading && <RecipesSkeleton length={start === 0 ? 20 : 5} />}
+      </ul>
+
+      {recipeToShow.length > 0 ? (
+        <div className={styles.moveToLoad}>
+          <button
+            type="button"
+            onClick={handleShowMoreRecipe}
+            className={styles.moveToLoadButton}
+          >
+            Load More
+          </button>
+        </div>
+      ) : (
+        !isLoading && (
+          <h2 className={styles.noRecipeFound}>No Recipe Found...... </h2>
+        )
+      )}
+      {moveToTop && (
+        <div className={styles.moveToTop}>
+          <button
+            type="button"
+            className={styles.moveToTopButton}
+            onClick={handleScrollToTop}
+          >
+            <BsArrowUpCircle size={28} />
+          </button>
+        </div>
       )}
     </section>
   );
