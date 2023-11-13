@@ -1,0 +1,48 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+  padding: 1em;
+}
+
+.title {
+  font-size: var(--text-4xl);
+  font-weight: 800;
+  white-space: nowrap;
+}
+.title .highlight {
+  color: var(--accent);
+  font-style: italic;
+  font-variation-settings: "slnt" -10;
+  font-style: oblique 10deg;
+}
+
+.image {
+  display: none;
+}
+
+.keyBoardShortcut {
+  font-weight: 600;
+}
+.text {
+  margin-left: -8rem;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.5625rem, -6.6578rem + 15.0424vw, 4rem);
+    justify-content: center;
+  }
+  .image {
+    display: block;
+  }
+}

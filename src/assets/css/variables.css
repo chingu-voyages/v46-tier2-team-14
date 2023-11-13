@@ -1,0 +1,70 @@
+/* root variables */
+:root {
+  --font-primary: "Inter";
+  --font-secondary: "Inter";
+  --radius: 0.5rem;
+  /* 
+    * fluid typography?
+    https://typescale.com/ 
+    https://utopia.fyi/type/calculator/?c=320,16,1.2,1240,16,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+  */
+  --text-xs: clamp(0.5625rem, 0.7402rem + -0.2293vw, 0.6944rem);
+  --text-sm: clamp(0.75rem, 0.862rem + -0.1446vw, 0.8331rem);
+  --text-base: clamp(1rem, 1rem + 0vw, 1rem);
+  --text-lg: clamp(1.2rem, 1.1537rem + 0.2315vw, 1.3331rem);
+  --text-xl: clamp(1.44rem, 1.3228rem + 0.5859vw, 1.7769rem);
+  --text-2xl: clamp(1.7281rem, 1.5053rem + 1.1141vw, 2.3688rem);
+  --text-3xl: clamp(2.0738rem, 1.6968rem + 1.8848vw, 3.1575rem);
+  --text-4xl: clamp(2.4881rem, 1.8896rem + 2.9924vw, 4.2088rem);
+  /* for skeleton */
+  --loader-background-color: #eeeeee;
+  --loader-highlight-color: #dedede;
+  --rounded-radius: 1rem;
+}
+/* COMMON */
+:root[data-theme="light"] {
+  --card: rgba(0, 0, 0, 0.03);
+  --border: rgba(0, 0, 0, 0.2);
+  --skeleton: rgba(0, 0, 0, 0.1);
+}
+:root[data-theme="dark"] {
+  --card: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.2);
+  --skeleton: rgba(225, 225, 225, 0.05);
+}
+/* GREENS 🟩 */
+:root[data-theme="light"] {
+  --text: hsl(42, 92%, 5%);
+  --background: hsl(43, 47%, 97%);
+  --primary: hsl(124, 15%, 45%);
+  --secondary: hsl(119, 24%, 57%);
+  --accent: hsl(120, 22%, 7%);
+  --card: rgba(0, 0, 0, 0.03);
+}
+:root[data-theme="dark"] {
+  --text: hsl(42, 92%, 95%);
+  --background: hsl(43, 47%, 3%);
+  --primary: hsl(124, 15%, 55%);
+  --secondary: hsl(119, 24%, 43%);
+  --accent: hsl(121, 35%, 23%);
+  --card: rgba(255, 255, 255, 0.03);
+}
+
+/* ORANGES 🟧 */
+
+:root[data-theme="light"] {
+  --text: #130e01;
+  --background: #fffaeb;
+  --primary: #ff8400;
+  --secondary: #fff5d6;
+  --accent: #cf4307;
+  --icon: #fef9ec;
+}
+:root[data-theme="dark"] {
+  --text: #fef9ec;
+  --background: #140f00;
+  --primary: #ff8400;
+  --secondary: #291f00;
+  --accent: #f86c30;
+  --icon: #130e01;
+}

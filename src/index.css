@@ -1,0 +1,41 @@
+@import url("./assets/css/reset.css");
+@import url("./assets/css/fonts.css");
+@import url("./assets/css/variables.css");
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+}
+/* app layout */
+#root {
+  font-size: var(--text-base);
+  min-height: 100vh;
+  min-height: 100dvh; /* mobile */
+
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  padding: 1.5em;
+
+  max-width: 64rem; /* for now */
+  margin: auto;
+  border: 1px solid var(--border);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px dashed var(--primary);
+}
+
+/* utility classes */
+/* screen reader only: https://benmyers.dev/blog/native-visually-hidden/ */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

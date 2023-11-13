@@ -1,0 +1,27 @@
+.skeleton {
+  background-color: var(--skeleton);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.rounded {
+  border-radius: var(--rounded-radius);
+}
+
+.circle {
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+.rectangle {
+  border-radius: 0;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
