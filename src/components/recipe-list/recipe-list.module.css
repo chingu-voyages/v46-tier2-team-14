@@ -54,6 +54,12 @@
   color: var(--text);
 }
 
+.moveToLoadButton:disabled {
+  cursor: not-allowed;
+  user-select: none;
+  opacity: 0.7;
+}
+
 .moveToTopButton {
   position: fixed;
   top: 0;

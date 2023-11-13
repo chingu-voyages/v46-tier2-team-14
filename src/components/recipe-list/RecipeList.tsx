@@ -109,6 +109,7 @@ export default function RecipeList() {
       {recipeToShow.length > 0 ? (
         <div className={styles.moveToLoad}>
           <button
+            disabled={isLoading}
             type="button"
             onClick={handleShowMoreRecipe}
             className={styles.moveToLoadButton}
