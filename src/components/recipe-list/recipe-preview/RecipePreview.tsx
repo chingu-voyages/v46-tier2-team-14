@@ -18,7 +18,7 @@ const RecipePreview = forwardRef(function RecipePreview(
 
   return (
     <Link
-      to={`recipe/${id}`}
+      to={`/recipe/${id}`}
       className={styles.recipe}
       ref={ref as unknown as Ref<HTMLAnchorElement>}
     >
