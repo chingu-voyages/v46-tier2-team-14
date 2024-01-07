@@ -10,9 +10,9 @@ export default function RecipesSkeleton({ length }: Props) {
         // eslint-disable-next-line react/no-array-index-key
         <li className={styles.recipe} key={index}>
           <div className={styles.wrapper}>
-            <Skeleton />
+            <Skeleton radius="0.5rem" />
           </div>
-          <Skeleton height={1.5} /> <Skeleton height={1} width="50%" />{" "}
+          <Skeleton height={1.5} /> <Skeleton height={1} width="50%" />
         </li>
       ))}
     </>

@@ -107,15 +107,16 @@ export default function RecipeList() {
       {isError && <TryAgain onRetry={refetch} />}
 
       <ul className={styles.list} ref={recipeListRef}>
-        {recipeToShow.map(({ id, thumbnail_url, name }) => (
-          <RecipePreview
-            key={id}
-            id={id}
-            name={name}
-            thumbnail_url={thumbnail_url}
-            ref={recipePreviewRef}
-          />
-        ))}
+        {((start === 0 && !isLoading) || start !== 0) &&
+          recipeToShow.map(({ id, thumbnail_url, name }) => (
+            <RecipePreview
+              key={id}
+              id={id}
+              name={name}
+              thumbnail_url={thumbnail_url}
+              ref={recipePreviewRef}
+            />
+          ))}
         {isLoading && <RecipesSkeleton length={start === 0 ? 20 : 5} />}
       </ul>
 

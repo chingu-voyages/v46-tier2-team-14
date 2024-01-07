@@ -10,6 +10,7 @@ import styles from "./OptionList.module.css";
 export type OptionI = {
   label: string;
   value: unknown;
+  isCustom?: boolean;
 };
 
 interface OptionListI {
@@ -102,7 +103,7 @@ function OptionList({
             to={`/${item.label}`}
             className={`${styles.listItem} ${
               ind === currInd - prevOpt.length ? styles["listItem--hover"] : ""
-            }`}
+            } ${item.isCustom ? styles["custom-option"] : ""}`}
             type="button"
           >
             <BiSearch size={24} />
