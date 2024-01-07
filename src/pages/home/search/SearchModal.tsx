@@ -102,7 +102,7 @@ function SearchModal() {
           }));
 
     return !opt.length && inputValue !== ""
-      ? [{ label: inputValue, value: inputValue }]
+      ? [{ label: inputValue, value: inputValue, isCustom: true }]
       : opt;
   }, [data, inputValue]);
 

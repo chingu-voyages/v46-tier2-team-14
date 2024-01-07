@@ -4,9 +4,10 @@ export interface SkeletonI {
   width?: number | string;
   height?: number | string;
   type?: "circle" | "rectangle" | "rounded";
+  radius?: number | string;
 }
 
-export default function Skeleton({ width, height, type }: SkeletonI) {
+export default function Skeleton({ width, height, type, radius }: SkeletonI) {
   return (
     <div
       className={`${styles.skeleton} ${type ? styles[type] : ""} `}
@@ -14,6 +15,7 @@ export default function Skeleton({ width, height, type }: SkeletonI) {
       style={{
         width: typeof width === "number" ? `${width}rem` : width,
         height: typeof height === "number" ? `${height}rem` : height,
+        borderRadius: typeof radius === "number" ? `${radius}rem` : radius,
       }}
     />
   );
